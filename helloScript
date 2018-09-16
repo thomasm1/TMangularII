@@ -27,11 +27,11 @@ date
 getDate 
 
 demoLocal() {
- 	local nameLocal="Paul"
+ 	local nameLocal="local Name ..."
  	return
  	}
 # Global variable
-name=“Tom”
+name="local"
 # Local variable values aren't available outside of the function
 demoLocal() {
 local name="Paul"
@@ -41,17 +41,7 @@ demoLocal
 echo $name
 echo "$name"
 #
-# Global variable
-name=“Tom”
-# Local variable values aren't available outside of the function
-demoLocal() {
-local name="Paul"
-return
- 	}
-demoLocal
-echo $name
-echo "$name"
- 	
+ 
  # A function that receives 2 values and prints a sum
 getSum() { 
  # Attributes are retrieved by referring to $1, $2, etc.
@@ -80,9 +70,7 @@ END
 echo "done"
 
 ######################################################################
-Conditionals / Input  
-	#!/bin/bash
-	
+ 
 	# You can use read to receive input which is stored in name
 	# The p option says that we want to prompt with a string
   	read -p "What is your name? " name
@@ -109,9 +97,8 @@ Conditionals / Input
  	# Closes the if statement
  	fi
  	
- 	2. Extended integer test
- 	#!/bin/bash
- 	
+ 	#2. Extended integer test
+
  	read -p "Enter a number : " num
  	
  	if ((num == 10)); then
@@ -133,8 +120,7 @@ Conditionals / Input
  		echo "$num is between 1 and 10"
  	fi
  	
- 	# && and || can be used as control structures
- 	
+ 	# && and || can be used as control structures 
  	# Create a file and then if that worked open it in Vim
  	touch samp_file && vim samp_file
  	
@@ -144,9 +130,8 @@ Conditionals / Input
  	# Delete file rm samp_file
  	# Delete directory rmdir samp_dir
 
-	3. Testing strings
-	#!/bin/bash
-	str1=""
+	#3. Testing strings
+	 
 	str2="Sad"
 	str3="Happy"
 	
@@ -220,9 +205,8 @@ Conditionals / Input
 		
 	fi
 	
-	4. With extended test [[ ]] you can use Regular Expressions
-	#!/bin/bash
-	
+	#4. With extended test [[ ]] you can use Regular Expressions
+ 
 	read -p "Validate Date : " date
 	
 	pat="^[0-9]{8}$"
@@ -233,8 +217,8 @@ Conditionals / Input
 		echo "$date is not valid"
 	fi
 	
-	5. # Read multiple values
-	#!/bin/bash
+	#5. # Read multiple values
+ 
 	
 	read -p "Enter 2 Numbers to Sum : " num1 num2
 	
@@ -243,7 +227,7 @@ Conditionals / Input
 	echo "$num1 + $num2 = $sum"
 	
 	# Hide the input with the s code
-	read -sp "Enter the Secret Code" secret
+	read -sp "Enter the Secret Code (password)" secret
 	
 	if [ "$secret" == "password" ]; then
 		echo "Enter"
@@ -251,9 +235,8 @@ Conditionals / Input
 		echo "Wrong Password"
 	fi
 	
-	6. You can set what separates the values with IFS
-	#!/bin/bash
-	
+	# 6. You can set what separates the values with IFS
+		
 	# Store the original value of IFS
 	OIFS="$IFS"
 	
@@ -275,23 +258,22 @@ Conditionals / Input
 	IFS="$OIFS"
 	
 	# Parameter expansion allows you to do this
-	name="Derek"
-	echo "${name}'s Toy"
+	name="Tom"
+	echo "${name}'s name is t-o-m"
 	
 	# The search and replace allows this
 	samp_string="The dog climbed the tree"
 	echo "${samp_string//dog/cat}"
 	
 	# You can assign a default value if it doesn't exist
-	echo "I am ${name:-Derek}"
+	echo "I am ${name:-Tom}"
 	
 	# This uses the default if it doesn't exist and assigns the value
 	# to the variable
-	echo "I am ${name:=Derek}"
+	echo "I am ${name:=Tom}"
 	echo $name
 	
-	7. Use case to when it makes more sense then if
-	#!/bin/bash
+	#7. Use case to when it makes more sense then if
 	
 	read -p "How old are you : " age
 	
@@ -300,7 +282,7 @@ Conditionals / Input
 	
 	# Match numbers 0 - 4
 	[0-4]) 
-		echo "To young for school"
+		echo "Too young for school"
 		;; # Stop checking further
 		
 	# Match only 5
@@ -320,8 +302,7 @@ Conditionals / Input
 		;;
 	esac # End case
 	
-	8. Ternary Operator performs different actions based on a condition
-	#!/bin/bash
+#	8. Ternary Operator performs different actions based on a condition
 	can_vote=0
 	age=18
 	
@@ -329,10 +310,8 @@ Conditionals / Input
 	echo "Can Vote : $can_vote"
 	
 	
-IV. Parameter Expansions and Strings
-
-	1. Strings
-	#!/bin/bash
+##   IV. Parameter Expansions and Strings
+# 1. String
 	
 	rand_str="A random string"
 	
@@ -348,11 +327,9 @@ IV. Parameter Expansions and Strings
 	# Return whats left after A
 	echo "${rand_str#*A }"
 
-V. Looping
+# V. Looping
 
-	1. While Loop
-	#!/bin/bash
-	
+#	1. While Loop
 	num=1
 	
 	while [ $num -le 10 ]; do
@@ -360,9 +337,8 @@ V. Looping
 		num=$((num + 1))
 	done
 	
-	2. Continue and Break
-	#!/bin/bash
-	
+#	2. Continue and Break
+		
 	num=1
 	
 	while [ $num -le 20 ]; do
@@ -382,8 +358,7 @@ V. Looping
 		num=$((num + 1))
 	done
 	
-	3. Until loops until the loop is true
-	#!/bin/bash
+	#3. Until loops until the loop is true
 	
 	num=1
 	
@@ -392,8 +367,8 @@ V. Looping
 		num=$((num + 1))
 	done
 	
-	4. Use read and a loop to output file info
-	#!/bin/bash
+	#4. Use read and a loop to output file info
+	 
   	while read avg rbis hrs; do
   	
   		# printf allows you to use \n
@@ -402,25 +377,23 @@ V. Looping
   	# Pipe data into the while loop
   	done < barry_bonds.txt
   	
-  	5. There are many for loop options. Here is the C form.
-  	#!/bin/bash
+  	#5. There are many for loop options. Here is the C form.
+  	 
   	for (( i=0; i <= 10; i=i+1 )); do
   		echo $i
   	done
   	
-  	6. We can cycle through ranges
-  	#!/bin/bash
+  #	6.  cycle through ranges
+   
   	for i in {A..Z}; do
   		echo $i
   	done
   	
-  	7.
-  	
-VI. Arrays
+	  # Arrays
 
-	1. Bash arrays can only have one dimension and indexes start at 0
-	2. Messing with arrays
-	#!/bin/bash
+	#1. Bash arrays can only have one dimension and indexes start at 0
+	#2. Messing with arrays
+	 
 	# Create an array
 	fav_nums=(3.14 2.718 .57721 4.6692)	
 	echo "Pi : ${fav_nums[0]}"	
@@ -454,12 +427,12 @@ VI. Arrays
 	unset sorted_nums
 
 	
-VII. Positional Parameters
-	1. Positional parameters are variables that can store data on the command line in variable names 0 - 9	
-		a. $0 always contains the path to the executed script
-		b. You can access names past 9 by using parameter expansion like this ${10}
-	2. Add all numbers on the command line
-	#!/bin/bash
+# VII. Positional Parameters
+#	1. Positional parameters are variables that can store data on the command line in variable names 0 - 9	
+#		a. $0 always contains the path to the executed script
+#		b. You can access names past 9 by using parameter expansion like this ${10}#
+#	2. Add all numbers on the command line
+	 
 	# Print the first argument
 	echo "1st Argument : $1"
 	sum=0
