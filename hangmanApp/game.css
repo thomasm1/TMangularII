@@ -1,0 +1,41 @@
+/*         BOX         D3     WIDGET       */
+/*         BOX         D3     geo-map  Jenks       */
+@import url("https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600");
+@import url("https://fonts.googleapis.com/css?family=Monoton:100,200,300,400,500,600");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+
+body {
+  background-image:url("./silverchip.png");
+  background-repeat: repeat;
+} 
+div.sidebar-sticky *{
+  background-image: url("TMM.PNG") !important;
+  background-repeat:repeat;
+}
+.navbar{position:relative;opacity:.4;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;padding:.5rem 1rem}.navbar>.container,.navbar>.container-fluid{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;opacity:.4;}
+
+div.sidebar-sticky.nav {
+  background-image: url("./TMM.PNG") !important;
+  background-repeat:repeat;
+}
+#game  { 
+
+  padding:10px;  
+  font-family:'Roboto';
+  font-size:120%; 
+  background-color:rgba(156, 184, 212, .5) ;
+}
+.minwidth40 {
+  min-width:40%;
+} 
+.h2 {
+  font-family:'Monoton';
+}
+#display {
+  font-family:'Monoton';
+ }
+#word {
+  border:1px solid yellow;
+  padding:3px;
+}

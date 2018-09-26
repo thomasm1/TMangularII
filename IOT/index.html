@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular.js"></script>
+    <script>
+        // document.write('<base href="' + document.location + '" />');
+        var app = angular.module('form', []);
+        app.controller('formController', function ($scope) { 
+            $scope.$watch('rangeField', function (newValue, oldValue) {
+                if (newValue) { 
+
+                    if ((newValue < 1200) || (newValue > 65000)) {
+                        error = "notwithin RANGE!";
+                        noerror = "NO err";
+                        console.log(error);
+                        showError = true;
+                    } else {
+                      console.log(noerror)
+                    };
+                }
+            });
+
+            $scope.updateValue = function (event) {
+                return false;
+            };
+        });  
+    </script>
+
+</head>
+
+<body ng-app="form">
+    <div ng-controller="formController" style="background-color:red;color:yellow;padding:10px;margin:10px;">
+        
+        <input style="background-color:blue;color:yellow;" ng-model="rangeField" name="rangeField"  
+            ng-keypress="updateValue();">
+        </input>
+        <p ng-show="error"> {{error}} </p>
+    </div>
+</body>
+
+</html>

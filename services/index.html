@@ -1,0 +1,91 @@
+<body ng-app="exServe">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js"></script>
+
+
+  <script>
+    //var exServe = angular.module("exServe", []);
+    var exServe = angular.module("exServe", []).run(["$rootScope", function ($rootScope) {
+      $rootScope.TaxPercent = 30;
+    }]);
+//control 0
+exServe.controller("zero", function() {
+  this.Number = "Zero";
+  this.Numero = "Cero";
+});
+//control 1
+    exServe.controller("exController", ["$scope", function ($scope) {
+      $scope.Name = "tm";
+    }]);
+//control 2
+    exServe.controller("exDetails", ["$scope", function ($scope) {
+      $scope.Sal = 3400;
+      $scope.Dept = "Sales";
+    }]);
+//control 3
+    exServe.controller("exPay", ["$scope", "$rootScope", function ($scope, $rootScope) {
+      $scope.getTaxes = function () {
+        return $scope.Sal * $rootScope.TaxPercent / 100;
+      };
+
+      $scope.getNet = function() {
+        return $scope.Sal - $scope.getTaxes();
+      };
+    }]);
+  // control 4 - Service
+  exServe.controller('serve', function($scope, calcServe){
+    calcServe.doSum()
+  });
+  // control 4's Service
+  exServe.provider('calcServe', function(){
+    var baseUrl = '';
+    this.config = function(url){
+      baseUrl = url;
+    };
+    this.$get = function(){
+      var oCalcServe = {};
+      oCalcServe.doSum = function(){
+
+      };
+      return oCalcServe;
+    } // missing closing brack ;
+  });
+  exServe.config(["calcServe", function(calcServeProvider) {
+    calcServeProvider.config('http://localhost:5000');
+  }]);
+
+  </script>
+
+  <h4>Version   1.5.11 Services
+
+  </h4>
+  <div ng-controller="exController">
+    Details of
+    <strong>{{Name}}</strong>:
+    <div ng-controller="exDetails">
+      <p ng-controller="zero as z">
+        Private Number: <strong>{{z.Number}}</strong>, and ...<br />
+        Numero Privado: <strong>{{z.Numero}}</strong>.
+        </strong>
+
+      </p>
+      <p>
+        <strong>{{Name}}</strong> earns
+        <strong>{{Sal}}</strong> and works in
+        <strong>{{Dept}}</strong> department.</p>
+    <div ng-controller="exPay">
+      <p> Taxes:
+        <strong>{{getTaxes()}}</strong>
+        <br /> Net:
+        <strong>{{getNet()}}</strong>
+      </p>
+    </div>
+    <div ng-controller="exServe">
+      <p> News A:
+        <strong>{{aServe()}}</strong>
+        <br /> News B:
+        <strong>{{bServe()}}</strong>
+      </p>
+    </div>
+  </div>
+</body>

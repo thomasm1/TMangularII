@@ -1,0 +1,18 @@
+{
+  "name": "csv",
+  "version": "1.0.0",
+  "description": "uses fs to write csv, serve csv",
+  "main": "csv.js",
+  "dependencies": {
+    "apigee-access": "^1.4.0",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.0",
+    "json-server": "^0.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
