@@ -1,0 +1,11 @@
+C:\Sources\MySolution\MySolution.Database\bin\Debug\MySolution.Database.dll
+C:\Sources\MySolution\MySolution.Database\bin\Debug\MySolution.Database.pdb
+C:\Sources\MySolution\MySolution.Database\bin\Debug\FluentMigrator.dll
+C:\Sources\MySolution\MySolution.Database\bin\Debug\FluentMigrator.pdb
+C:\Sources\MySolution\MySolution.Database\bin\Debug\FluentMigrator.xml
+C:\Sources\MySolution\MySolution.Database\obj\Debug\MySolution.Database.csprojResolveAssemblyReference.cache
+C:\Sources\MySolution\MySolution.Database\obj\Debug\MySolution.Database.dll
+C:\Sources\MySolution\MySolution.Database\obj\Debug\MySolution.Database.pdb
+C:\Sources\MySolution\MySolution.Database\bin\Debug\Migrate_up.bat
+C:\Sources\MySolution\MySolution.Database\bin\Debug\Migrate_down.bat
+C:\Sources\MySolution\MySolution.Database\bin\Debug\StoredProcedures\sp_SelectUsers.sql
