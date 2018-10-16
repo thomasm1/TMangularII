@@ -5,47 +5,24 @@
   <title>Movie App</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <style type="text/css">
-    .header {  background-image: url('img/bluechipTileT8.png');
-                background-color:rgb(228, 247, 255);
-              }
-    .container { max-width: 460px; 
-      color:white;
-      background-color:blue;
-    } 
-   h1,h2,h3,h4,h5,h6 {
-     color:steelblue;
-   }
-   
-   a {
-     color:lightsteelblue; 
-   } 
-   P { color:white;
-  }
-    .all { background-image: url('img/bluechipTileT8.png');
-    background-color:rgb(65, 108, 228); 
-  }
-  .whole-app {
-    color:blue;
-  }
+    .container { max-width: 900px; }
   </style>
 </head>
-<body class="all">
+<body>
 
   <div class="header">
     <div class="container">
       <div class="page-header">
-        <h1><a href="#/">Movie Data from OMDB</a></h1>
-        <p class="lead">Movies</p>
+        <h1><a href="#/">MovieApp</a></h1>
+        <p class="lead">Your Resource for Movie Data.</p>
       </div>
       <div ng-controller="SearchController">
         <form class="form-inline-lg" ng-submit="search()">
           <div class="input-group">
-
             <input type="text" class="form-control" placeholder="Film title..." ng-model="query" 
             ng-keyup="keyup()" ng-keydown="keydown()">
-
             <span class="input-group-btn">
-              <button class="btn btn-default" type="button" ng-click="search()">Query!</button>
+              <button class="btn btn-default" type="button" ng-click="search()">Go!</button>
             </span>
           </div>
         </form>
@@ -61,7 +38,7 @@
 
   <div class="footer">
     <div class="container">
-      <p>thomasmaestas.net | movie data from http://www.omdbapi.com</p>
+      <p>from @bradoncode | movie data from http://www.omdbapi.com</p>
     </div>
   </div>
 

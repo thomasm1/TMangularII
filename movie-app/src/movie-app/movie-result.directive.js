@@ -7,7 +7,7 @@ angular.module('movieApp')
 				result: '=result'
 			},
 			template: [
-            '<div class="row" ng-class="whiteblack">',
+            '<div class="row">',
             	'<div class="col-sm-4">',
             		'<img ng-src="{{result.Poster}}" alt="{{result.Title}}" width="220">',
             	'</div>',

@@ -1,11 +1,11 @@
-<div ng-class="whole-app">
+<div>
   <br>
   <ol class="breadcrumb">
     <li><a ng-href="#/">Home</a></li>
     <li>Results</li>
   </ol>
 
-  <accordion class="whole-app">
+  <accordion>
     <accordion-group ng-repeat="result in results" is-open="result.open"
       ng-click="expand($index, result.imdbID)">
       <accordion-heading>
