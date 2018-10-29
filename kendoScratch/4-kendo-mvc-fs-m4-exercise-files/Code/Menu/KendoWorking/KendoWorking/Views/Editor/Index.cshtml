@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Editor</h2>
+@(Html.Kendo().Editor()
+    .Name("editor")
+    .Tools(tools => tools
+    .Clear()
+    .FontName(items => items
+        .Add("Verdana", "Verdana, Geneva, sans-serif")
+        .Add("Garamond", "Garamond, serif")
+    )
+    .FontSize(items => items
+        .Add("1 (8pt)", "xx-small")
+        .Add("16px", "16px")
+    )
+        .CustomButton(cb => cb.Name("custom").ToolTip("Insert a horizontal rule").Exec(@<text>
+            function(e) {
+                var editor = $(this).data("kendoEditor");
+                editor.exec("inserthtml", { value: "<hr />" });
+            }
+        </text>))
+      )
+      .Value(@<text>
+                  <p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non urna sapien. Pellentesque erat lacus, luctus eu lorem sed, viverra lobortis arcu. Curabitur pretium pellentesque tortor, et ullamcorper leo ullamcorper et. Cras vehicula, enim tristique laoreet dictum, ipsum odio venenatis mi, in scelerisque justo turpis a massa. Pellentesque pretium laoreet tincidunt. Nulla laoreet sagittis vestibulum. Suspendisse id dignissim nibh. Aliquam vitae nulla et lorem adipiscing accumsan. Quisque gravida tincidunt mi, eget suscipit nisl gravida eu. Curabitur vulputate justo quis tincidunt euismod.                                           
+                  </p>                  
+
+              </text>)
+)
