@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Date Pickers</h2>
+<label for="start">Start date:</label>
+@(Html.Kendo().DatePicker()
+    .Name("start")
+    .Value("9/28/2013")
+    .Max("9/28/2014")
+    .Events(e => e.Change("startChange"))
+
+)
+
+<label for="end">End date:</label>
+@(Html.Kendo().DatePicker()
+      .Name("end")
+      .Value("9/28/2014")
+      .Min("9/28/2013")
+      .Events(e => e.Change("endChange"))
+)
+
+<script>
+    function startChange() {
+        var endPicker = $("#end").data("kendoDatePicker"),
+            startDate = this.value();
+
+        if (startDate) {
+            startDate = new Date(startDate);
+            startDate.setDate(startDate.getDate() + 1);
+            endPicker.min(startDate);
+        }
+    }
+
+    function endChange() {
+        var startPicker = $("#start").data("kendoDatePicker"),
+            endDate = this.value();
+
+        if (endDate) {
+            endDate = new Date(endDate);
+            endDate.setDate(endDate.getDate() - 1);
+            startPicker.max(endDate);
+        }
+    }
+
+</script>
