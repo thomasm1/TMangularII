@@ -1,3 +1,0 @@
-describe('hi there', function() {
-
-});

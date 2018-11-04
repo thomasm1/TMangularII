@@ -1,7 +1,0 @@
-
-describe("combat attack", function() {
-  
-	
-  
-});
-
