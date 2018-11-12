@@ -8,6 +8,7 @@
     "scripts": {
         "tsc": "tsc",
         "tsc:w": "tsc -w",
+        "setup": "gulp copy:libs",
         "server": "node server.js",
         "start": "concurrently \"npm run tsc:w\" \"nodemon server.js\""
     },
