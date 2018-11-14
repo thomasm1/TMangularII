@@ -1,3 +1,8 @@
+### mongod
+### npm setup -->gulp copy:libs
+### npm start
+### http://localhost:3000/customers
+
 # Angular, NodeJS, MongoDB Customers Service
 
 This project provides a look at getting started using Angular Http functionality and how it can be used

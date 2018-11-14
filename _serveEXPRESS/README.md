@@ -1,3 +1,4 @@
+## npm start
 ## npm   
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
