@@ -1,8 +1,8 @@
-const Sequelize = require('sequalize');;
+const Sequelize = require('sequelize');;
 const database = 'tmm',
 host = 'tmm.c1qsmfd1qtyd.us-east-1.rds.amazonaws.com',
 username = 'thomasm1',
-password = 'password';
+password = 'xxxxxxxxxxxxxx';
 
 const pgClient = new Sequelize(database, username, password, {
   host: host,
