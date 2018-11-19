@@ -1,11 +1,8 @@
-'use strict';
 /**
  * Calculates result for a simple mathematical expression.
- * regex101.com
+ *
  * @param {string} inputValue
  */
-
-
 function calculate(inputValue) {
   const expression = /\+|\-|\*|\//;
   const numbers = inputValue.split(expression);
@@ -37,8 +34,6 @@ function calculate(inputValue) {
     case '/':
       result = calculator.divide(numberB);
       break;
-    default:
-      result = 'Operation not recognized';
   }
 
   updateResult(result);
@@ -54,4 +49,15 @@ function updateResult(result) {
   if (element) {
     element.innerText = result;
   }
+}
+
+/**
+ * Shows calculator version in DOM.
+ */
+function showVersion() {
+  const calculator = new Calculator();
+
+  const element = document.getElementById('version');
+
+  element.innerText = calculator.version;
 }

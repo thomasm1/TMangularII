@@ -1,11 +1,8 @@
-'use strict';
 /**
  * Calculates result for a simple mathematical expression.
- * regex101.com
+ *
  * @param {string} inputValue
  */
-
-
 function calculate(inputValue) {
   const expression = /\+|\-|\*|\//;
   const numbers = inputValue.split(expression);
