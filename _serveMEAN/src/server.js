@@ -5,7 +5,7 @@ const express       = require('express'),
     bodyParser      = require('body-parser'),
     cookieParser    = require('cookie-parser'),
     errorhandler    = require('errorhandler'),
-    csrf            = require('csurf'),
+    csrf            = require('csrf'),
     morgan          = require('morgan'),
     favicon         = require('serve-favicon'),
     
