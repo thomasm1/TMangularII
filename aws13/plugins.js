@@ -38,8 +38,10 @@ module.exports.registerPlugins = (server, callback) => {
       partialsPath: './templates/partials',
       helpersPath: './templates/helpers'
     });
-
+///
     const cache = server.cache({
+      ///
+      cache: 'redis',
       segment: 'sessions',
       expiresIn: 24 * 60 * 60 * 1000
     });

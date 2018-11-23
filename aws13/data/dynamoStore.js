@@ -13,7 +13,7 @@ function putItem(table, item, callback) {
 		if (typeof item[key] === 'string') {
 			val = { S: item[key]};
 		} else if (typeof item[key] === 'number') {
-			val = {N: '' + item[key]};
+			val = { N: '' + item[key]};
       }
       params.Item[key] = val;
     }
