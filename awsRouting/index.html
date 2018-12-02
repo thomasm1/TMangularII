@@ -1,0 +1,306 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">      <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71584977-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || []; 
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-71584977-1'); 
+  </script>
+  <style>
+    .ui-view {
+      margin-top:50px;
+    }
+    .alpho0 {
+      color:darkcyan;
+    } 
+  </style>
+
+  <meta name="description" content="Sociology Data Analysis, Web Development and Statistical Consulting | Statistical Consultant. Get statistics help: 
+Thomas offers services related to analyzing qualitative &amp; quantitative data and reporting results in academic journals and business briefs alike.  Recent projects include research design, app design, and proof-of-concept for Xpansiv Data Systems, 
+and data analysis and web-application implementation. Data analysis and special pricing offers competitive benefits for clients.  
+If you need help with R, Python, Stata or SPSS, contact Thomas Maestas. Thomas will perform the analysis for you so you can focus on your
+ project and avoid the web and statistical package learning curve.">
+
+  <meta name="keywords" content="  data analysis and visualization, sociology statistical tests">
+  <meta name="author" content="Thomas Maestas">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TMM | Home</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.20/angular-ui-router.min.js"></script> 
+  <!--<script src="bower_components/angular-animate/angular-animate.js"></script>                   
+  <script src="components/home.js"></script>
+   
+  -->
+  <script src="app-tmm.js"></script>      
+
+  <script src="components/posts.js"></script>
+  <script src="components/about.js"></script> 
+  <script src="components/maps.js"></script> 
+
+  <script src="app.module.js"></script>
+  <script src="app.config.js"></script>
+  <script src="core/core.module.js"></script>
+  <script src="core/checkmark/checkmark.filter.js"></script>
+  <script src="core/post/post.module.js"></script>
+  <script src="core/post/post.service.js"></script>
+  <script src="post-list/post-list.module.js"></script>
+  <script src="post-list/post-list.component.js"></script>
+  <script src="post-detail/post-detail.module.js"></script>
+  <script src="post-detail/post-detail.component.js"></script>                         
+  <script src="components/dag.js"></script>
+
+  <script src="dist/js/post-list.controller.js"></script> 
+  <base href="/" />
+  <link rel="stylesheet" href="dist/css/font.css">
+  <link rel="stylesheet" href="dist/css/main.css">
+  <link rel="stylesheet" href="dist/css/app.css">
+
+  <script src="dist/js/vendor/modernizr.js"></script>
+</head>
+<body ng-app="tmm" class="page-home">
+
+  <header class="site-header">
+    <h1 class="title">Wild Rydes</h1>
+    <nav class="site-nav">
+      <ul> <li>
+            <a ui-sref="home" ui-sref-active="active">HOME</a>
+          </li>
+          <li>
+            <a ui-sref="services" ui-sref-active="active">SERVICES</a>
+          </li>
+          <li>
+            <a ui-sref="about" ui-sref-active="active">ABOUT</a> 
+            </li>  
+            <li>
+            <a ui-sref="about" ui-sref-active="active">ABOUT</a> 
+            </li> 
+         <li>  <a ui-sref="register" ui-sref-active="active"  >LOGIN</a></li>  
+        <li><a  ui-sref="faq" ui-sref-active="active" >FAQ</a></li>
+        <li><a  ui-sref="dataviz" ui-sref-active="active"  >DATA VIZ</a></li>  
+        <li><a href="investors.html">DATA VIZ   </a></li> 
+        <li><a  ui-sref="apply" ui-sref-active="active"  >DAG MAKER</a></li>
+      </ul>
+    </nav>
+    <button type="button" class="btn-menu"><span>Menu</span></button>
+    
+  </header>
+
+  <div>
+  <nav id="nav" class="  navbar navbar-default">
+    <img src="dist/img/tmmpurple.png" alt="picture of Thomas at Satellite Cafe, Albuquerque Central Ave. " id="tmmlogo" class="profile"
+    />
+    <div class="container  "> 
+      <div class=" navbar-header">
+        <button type="button" id="aria" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
+          <span class="sr-only"> </span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"> </a>
+      </div>
+ 
+    <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav   nav-space">
+          <li>
+            <a ui-sref="home" ui-sref-active="active">HOME</a>
+          </li>
+          <li>
+            <a ui-sref="services" ui-sref-active="active">SERVICES</a>
+          </li>
+          <li>
+            <a ui-sref="about" ui-sref-active="active">ABOUT</a> 
+            </li>  
+         <li>  <a ui-sref="register" ui-sref-active="active"  >LOGIN</a></li>  
+        <li><a  ui-sref="faq" ui-sref-active="active" >FAQ</a></li>
+        <li><a  ui-sref="dataviz" ui-sref-active="active"  >DATA VIZ</a></li>   
+        <li><a  ui-sref="dag" ui-sref-active="active"  >DAG MAKER</a></li>
+          
+        
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a title="github" href="https://github.com/thomasm1" target="_blank">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a title="twitter" href="https://twitter.com/ThomasMaestas" target="_blank">
+              <i class="fa fa-twitter"></i>
+            </a>
+
+          </li>
+
+          <li>
+
+            <a title="facebook" href="https://www.facebook.com/thomasm1.maestas" target="_blank">
+
+              <i class="fa fa-facebook"></i>
+
+            </a>
+
+          </li>
+
+          <li>
+
+            <a title="linkedin" href="http://linkedin.com/in/thomasmaestas" target="_blank">
+
+              <i class="fa fa-linkedin"></i>
+
+            </a>
+
+          </li>
+        </ul>
+
+      </div>
+
+    </div> 
+  </nav>   <h2 class="  dailytech alpho0">WELCOME&nbsp; &nbsp;TO&nbsp; &nbsp; TMM </h2>
+
+    <div class="container jumb  ">
+     
+       
+      <br />
+      <br />
+    </div>
+<div class="ui-view">
+    <ui-view></ui-view>
+  </div>
+
+
+    
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
+  </div>
+  <section class="home-about">
+    <div class="row column large-9 xlarge-6 xxlarge-4"> 
+      <p class="content">
+      
+      </p>
+    </div>
+
+    <div class="row medium-up-2 large-up-4">
+      <div class="column">
+        <div class="home-about-block">
+          <h3 class="title icon-download">Download The App</h3>
+          <p class="content">Head over to the app store and download the Wild Rydes app. You’re just a few taps away from getting your ryde.</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="home-about-block">
+          <h3 class="title icon-unicorn">Request A Unicorn</h3>
+          <p class="content">We can get you there. Simply request a ryde on the app and we'll connect you with a unicorn immediately.</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="home-about-block">
+          <h3 class="title icon-price">Pick A Price</h3>
+          <p class="content">Pick the valuation you're willing to pay and your ryde is set up. The only surge is the acceleration you get when taking off.</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="home-about-block">
+          <h3 class="title icon-success">Ride Off To Success!</h3>
+          <p class="content">After matching with your unicorn and agreeing to its terms, you’ll be all set. Your unicorn will arrive shortly to pick you up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-story">
+    <div class="row column large-9 xlarge-6 xxlarge-4">
+      <h2 class="section-title">Our Story</h2>
+      <p class="content">
+       
+      </p>
+    </div>
+  </section>
+
+  <section class="home-sign-up">
+    <div class="row column">
+      <img class="icon-w" src="dist/images/wr-home-W.png">
+
+      <form onsubmit="javascript:void(0);">
+        <input type="email" placeholder="Enter your email address">
+        <button type="button">Submit</button>
+      </form>
+
+      <h2 class="section-title">Sign Up</h2>
+
+      <p class="content">  Enter your email to enter the limited private beta</p>
+
+      <div class="apps">
+        <a class="app-icon" href=""><img src="dist/images/wr-home-apple.png"></a>
+        <a class="app-icon" href=""><img src="dist/images/wr-home-google.png"></a>
+        <a class="app-icon" href=""><img src="dist/images/wr-home-blackberry.png"></a>
+        <a class="app-icon" href=""><img src="dist/images/wr-home-Xiaomi.png"></a>
+      </div>
+
+      <div class="social">
+        <a class="icon-fb" href="">Facebook</a>
+        <a class="icon-tw" href="">Twitter</a>
+        <a class="icon-ig" href="">Instagram</a>
+        <a class="icon-wc" href="">Wechat</a>
+        <a class="icon-wb" href="">Weibo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-quote">
+    <div class="row column medium-8 xxlarge-6">
+      <div class="quote-wrap">
+        <div class="quote">
+          “ .. under five minutes.”
+        </div>
+        <div class="quoter">- Satisfied Wild Rydes User</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kraken-callout">
+    <div class="row">
+      <div class="columns medium-6 xxlarge-4 xxlarge-offset-2">
+        <img src="dist/images/wr-home-kraken.png">
+      </div>
+
+      <div class="columns medium-6 xlarge-5 xxlarge-4">
+        <h4 class="title">D3 Graphs</h4>
+        <p class="content">
+          
+  <div class="svgHolder" style="opacity:.5;position:absolute;top:20px;" id="force"></div>
+  <script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
+  <script type="text/javascript" src="dist/js/dag.js"></script>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="row column">
+      <nav class="footer-nav">
+       
+<div ng-include="'views/footer.html'"></div>
+      </nav>
+    </div>
+ 
+  </footer>
+
+  <script src="dist/js/vendor.js"></script>
+
+  <script src="dist/js/main.js"></script>
+    <script src="dist/tmm_bundle_july-4.js"></script> 
+</body>
+</html>
