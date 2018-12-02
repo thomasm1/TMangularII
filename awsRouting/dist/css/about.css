@@ -1,0 +1,606 @@
+body {
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+
+}
+
+
+
+
+
+#blog {
+
+    text-align: justify;
+
+    padding-left: 30px;
+
+    padding-right: 30px;
+
+    padding-top: 10px;
+
+    padding-bottom: 5px;
+
+    color: yellow;
+
+    background-image: url('../img/bluechipTile.jpg');
+
+    height: 300px;
+
+    overflow-y: scroll;
+
+    border-bottom-style: solid;
+
+    border-bottom-color: white;
+
+    border-bottom-width: 1px;
+
+    border-top-style: solid;
+
+    border-top-color: white;
+
+    border-top-width: 1px;
+
+}
+
+
+.row {
+
+    width: 100%;
+
+    margin-top: 0px;
+
+    margin-right: 0px;
+
+    margin-bottom: 0px;
+
+    margin-left: 0px;
+
+    padding-top: 0px;
+
+    padding-right: 0px;
+
+    padding-bottom: 0px;
+
+    padding-left: 0px;
+
+    display: inline-block
+}
+
+.row.blockDisplay {
+
+    display: block;
+
+}
+
+.column_half {
+
+    width: 50%;
+
+    float: left;
+
+    margin-top: 0px;
+
+}
+
+.columns {
+
+    width: 25%;
+
+    float: left;
+
+    font-family: "Source Sans Pro";
+
+    color: #A5A5A5;
+
+    line-height: 24px;
+
+    padding-top: 10px;
+
+    padding-bottom: 10px;
+
+    text-align: justify;
+
+    margin-top: 15px;
+
+    margin-bottom: 15px;
+
+    padding-left: 0px;
+
+    padding-right: 0px;
+
+    margin-left: 0px;
+
+    margin-right: 0px;
+
+}
+
+.row .columns p {
+
+    padding-left: 10%;
+
+    padding-right: 10%;
+
+}
+
+
+
+.container .columns h4 {
+
+    text-align: center;
+
+    color: #01B2D1;
+
+}
+
+.placeholder {
+
+    /* [disabled]max-width: 400px;
+
+*/
+    /* [disabled]max-height: 200px;
+
+*/
+    width: 100%;
+
+    padding-top: 30px;
+
+    /* [disabled]padding-left: 19px;
+
+*/
+    padding-bottom: 30px;
+
+    height: 100%;
+
+}
+
+.left_half {
+
+    background-color: #52BAD5;
+
+    color: #FFFFFF;
+
+    font-family: "Source Sans Pro";
+
+    text-align: center;
+
+    font-weight: bold;
+
+}
+
+.container .column_half .left_half h2 {
+
+    background-color: #52BAD5;
+    color: #FFFFFF;
+
+    font-family: "Source Sans Pro";
+
+    text-align: center;
+
+}
+
+.container .column_half .left_half h2 a:hover {
+
+    color: #FFFFFF;
+
+    font-family: "Source Sans Pro";
+
+    text-align: center;
+
+}
+
+.right_half {
+
+    background-color: white;
+
+    color: #FFFFFF;
+
+    font-family: "Source Sans Pro";
+
+    text-align: center;
+
+    font-weight: bold;
+
+}
+
+.column_title {
+
+    padding-top: 20px;
+
+    padding-bottom: 20px;
+
+    text-decoration: none;
+
+}
+
+.column_title h2 {
+
+    text-decoration: none;
+
+}
+
+
+
+ 
+
+    #second {
+        padding-right: 40%;
+        padding-left: 30%;
+
+    }
+
+
+    .placeholder {
+
+        width: 100%;
+
+        margin-top: 22PX;
+
+        margin-right: 0px;
+
+        margin-bottom: 22PX;
+
+        margin-left: 0px;
+
+        padding-top: 0px;
+
+        padding-right: 0px;
+
+        padding-bottom: 0px;
+
+        padding-left: 0px;
+
+        max-width: 400px;
+
+        max-height: 200px;
+
+        height: auto;
+
+    }
+
+
+ 
+
+@media (min-width: 1001px) {}
+
+.thumbnail {
+
+    width: 60px;
+
+    background-color: teal;
+
+    border-radius: 200px;
+
+    height: 60px;
+
+    margin-left: auto;
+
+}
+
+.thumbnail_align {
+
+    text-align: center;
+
+    transition: all 0.3s linear;
+
+}
+
+.container .thumbnail .thumbnail_align:hover {
+
+    cursor: pointer;
+
+    opacity: 0.5;
+
+}
+
+.social {
+
+    text-align: center;
+
+    margin-right: 0px;
+
+    margin-bottom: 0px;
+
+    margin-left: 0px;
+
+    width: 100%;
+
+    background-color: #414141;
+
+    clear: both;
+
+    overflow: auto;
+
+}
+
+.social_icon {
+
+    width: 25%;
+
+    text-align: center;
+
+    float: left;
+
+    transition: all 0.3s linear;
+
+    line-height: 0px;
+
+    padding-top: 7px;
+
+}
+
+.container .social .social_icon:hover {
+
+    cursor: pointer;
+
+    opacity: 0.5;
+
+}
+
+#id2 {
+    color: yellow;
+    background-color: blue;
+    border-top-style: solid;
+    border-top-color: yellow;
+    border-top-width: 2px;
+
+}
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+
+
+    /* Better text styling */
+}
+div#menumenu.multi_drop_menu nav {
+    z-index: 1000 !important;
+    background-color:red !important;
+   
+} 
+
+.panel, .panel p, .panel h2, h3, h4 {
+    color:rgb(206, 223, 245);
+    padding:.5% 2%;
+text-align:justify;
+    background-color:rgba(51, 155, 240,.4) !important;
+    font-size:110%!important;
+}
+
+.panel-heading {
+    background-color:rgba(51, 155, 240,.4) !important;
+
+}
+
+.panel-heading a :hover{
+    color:blue !important; 
+}
+.panel-title h2{ 
+    font-size:100%;
+}
+.panel-body {
+     border:none;}    
+h3.thomas  {
+    font-size:110%;
+    padding:30px; 
+}
+#thomas {
+    padding-top:30px;
+    padding-bottom:40px;
+}
+div.media-body {
+    font-size:115%
+}
+.two {
+color:white !important; 
+background-color:rgba(51, 155, 240,.7) !important;
+padding:10px;
+}
+.one {
+    color:white !important; 
+    margin:10px;
+    }
+
+    
+.multi_drop_menu  a   {
+    background-color:transparent ;
+
+}
+.lowercase * {
+    text-transform:lowercase !important;
+}
+
+/*    */
+* li {
+    list-style-type: none;
+}
+
+.matrix {
+    font-family: Lucida Console, Courier, Monotype;
+    font-size: 10pt;
+    text-align: center;
+    width: 10px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.mediat {
+    padding: 15px 10px 20px 10px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    margin-right: 0px;
+    background-color:rgba(51, 155, 240,.7) !important;
+    min-width: 30%;
+
+
+}
+
+.mediac a {
+    color: lightskyblue !important;
+    font-size:113%;
+}
+
+.media-left {
+    padding-left: 0px;
+}
+
+.mediac h6 {
+    padding: 4px;
+    font-size: 1.4rem;
+    text-align: left;
+    color: aliceblue;
+}
+
+.mediac h4 {
+
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#chart {
+ 
+    background-color:rgba(51, 155, 240,.5) !important;
+    max-width: 100%;
+    margin: 0px;
+}
+
+#myChart { 
+    background-color:rgba(51, 155, 240,.5) !important; 
+    max-width: 100%;
+    padding: 3% 15%;
+
+}
+
+#chart h4,
+h5 {
+    min-width: 100%;
+    padding: 10px;
+    border-bottom: .5px solid rgb(38, 113, 175);
+
+
+}
+
+.download a small {
+    float: right;
+    text-align: right;
+    font-size: 1.4rem;
+    color: lightskyblue !important;
+    text-transform: uppercase;
+
+}
+
+.thank {
+    background: lightskyblue;
+}
+
+small {
+    color:lightskyblue !important;
+}
+
+.panel-default {
+    background-image:   url(../img/bluechipTile.jpg)  repeat 0 !important;
+    
+    background-color: #52BAD5;
+}
+
+.container { 
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../img/bluechipTile.jpg') !important; 
+    margin-right: auto;
+    margin-left: auto;
+    border: 5px outset #304bb6;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    border-bottom-width: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+.container a {
+    color:lightskyblue;
+    font-size:1.4em;
+    text-align:center;
+}
+.container p {
+    padding:1%; 
+} 
+.primary_header {
+    text-align: center;
+    width: 100%;
+    clear: left;
+}
+.mediac {
+    background: steelblue;
+    text-align: left !important;
+    margin-left:0px;
+
+}
+
+
+.mediac a {
+    color: darkslategray;
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+h1,h2,h3,h4,h5, h6 {
+    text-align:center;
+    text-transform:uppercase !important;
+    padding-top:5px !important;
+    padding-bottom:5px !important;
+}
+span.label.label-default  {
+font-size:105%;
+padding-top:6px;
+background-color:slategray!important;
+color:white !important;
+
+}
+div.progress-bar  {
+    color:white;
+    font-size:101%;
+}
+
+.lowercase {
+    text-transform:default;
+}
+.capitalize {
+ text-transform:capitalize !important; 
+} 
+#accordion {
+    z-index:4;
+}
+.canvas2 {
+    z-index:0;
+}
+
+.panel-heading a {z-index:10;
+}
+div.panel.panel-default * {
+    z-index:1001;
+}
+canvas.canvas2 {
+    z-index:1;
+} 
+.canvas2 {
+    z-index:1;
+} 
+div.container.jumb {
+display:none;
+}
