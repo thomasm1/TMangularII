@@ -1,13 +1,13 @@
 {
-  "name": "pizza-luvrs",
+  "name": "rsi_sensor",
   "version": "1.0.0",
-  "description": "A social oasis for lovers of pizza.",
-  "repository": "https://github.com/ryanmurakami/pizza-luvrs",
+  "description": "RSI Barometric Eco-Sensor",
+  "repository": "https://github.com/thomasm1/TMangularII/IOT/rsi_sensor",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "author": "Ryan Lewis <ryanharrisonlewis@gmail.com>",
+  "author": "Thomas Maestas",
   "license": "ISC",
   "dependencies": {
     "async": "2.0.0-rc.6",

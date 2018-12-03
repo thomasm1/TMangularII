@@ -2,8 +2,8 @@ const Sequelize = require('sequelize');
 
 const database = 'sensor_db',
   host = 'sensor-instance.caq9hvksjohf.us-east-1.rds.amazonaws.com',
-  username = 'tom_maestas',
-  password = 'myZenith1$';
+  username = '',
+  password = '';
 
 const pgClient = new Sequelize(database, username, password, {
   host:host,
