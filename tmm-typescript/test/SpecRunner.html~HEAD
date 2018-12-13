@@ -32,8 +32,10 @@
   <script src="../app/people/people.module.js"></script>
   <script src="../app/people/masterController.js"></script>
 
-  <!-- include spec files here... -->
-  <script src="spec/masterControllerSpec.js"></script>
+  <!-- include spec files here... 
+  
+  <script src="spec/masterControllerSpec.js"></script>-->
+  <script src="masterControllerSpec.js"></script>
 </head>
 
 <body>

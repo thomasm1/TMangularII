@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 https://github.com/TonyCurtisLives/VirtualDog.git
 npm install
 npm run bower-typings 
@@ -7,6 +8,10 @@ npm run typings -- install dt~jasmine --global --save  // that's a dash-dash bef
 npm run typings -- install dt~angular-mocks--global --save-dev  // that's a dash-dash before install!
  
 ##
+=======
+# VirtualDog
+## An easy to grasp example for training on various web technologies
+>>>>>>> f15e2ae51b45df9ec51a246bf38cef43590a35f0
 
 ### Use the **feature/begin** and **feature/end** branches to follow along with the [Pluralsight course here](https://www.pluralsight.com/courses/javascript-jasmine-typescript) 
 
@@ -26,7 +31,11 @@ Instead do this (as needed):
 ```
 npm run tsc 
 npm run tsc -- -w
+<<<<<<< HEAD
 npm run typings -- install dt~jasmine --global --save
+=======
+npm run typings -- install dt~silly-node-module --global --save
+>>>>>>> f15e2ae51b45df9ec51a246bf38cef43590a35f0
 ```
 
 The pertinent part being `npm run` and if you want to add command line parameters follow the module name with the double dash (`--`) then add your command line parameters.

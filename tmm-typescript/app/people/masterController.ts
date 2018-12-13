@@ -23,8 +23,8 @@
     }
 
     public throwSomething = (object) =>
-      ///this.$rootScope.$broadcast(this.eventNames.masterThrow, object);
-      this.$rootScope.$broadcast(this.eventNames.masterThrow, { });
+      this.$rootScope.$broadcast(this.eventNames.masterThrow, object);
+
     public feedTheDog = (food) =>
       this.$rootScope.$broadcast(this.eventNames.masterFeed, food);
 

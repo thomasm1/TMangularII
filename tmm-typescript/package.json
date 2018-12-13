@@ -1,5 +1,5 @@
 {
-  "name": "VirtualDog",
+  "name": "type ",
   "version": "0.0.1",
   "description": "App to demo AngularJs, Jasmine, TypeScript, and associated techs",
   "main": "index.js",
@@ -27,6 +27,6 @@
     "tsc": "tsc",
     "tinyserv": "node server/tinyserv"
   },
-  "author": "Tony Curtis",
+  "author": " ",
   "license": "MIT"
 }

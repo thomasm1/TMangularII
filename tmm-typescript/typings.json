@@ -1,7 +1,6 @@
 {
   "name": "VitrualDog",
   "dependencies": {
-    "angular-mocks": "registry:dt/angular-mocks#1.5.0+20170201235656",
     "bluebird": "registry:npm/bluebird#3.3.4+20160515010139"
   },
   "globalDevDependencies": {
@@ -10,7 +9,6 @@
   },
   "globalDependencies": {
     "angular": "registry:dt/angular#1.5.0+20160517064839",
-    "jasmine": "registry:dt/jasmine#2.5.2+20170317130948",
     "jquery": "registry:dt/jquery#1.10.0+20160417213236",
     "node": "registry:env/node#6.0.0+20160918225031"
   }
