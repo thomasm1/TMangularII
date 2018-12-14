@@ -1,13 +1,16 @@
-    <h2> Welcome </h2>
+<h2> Welcome 3 </h2>
 
-    <div ng-controller="welcome as vm">
+<div ng-controller="welcome3 as vm">
+    Hello again, again...
 
-
-        Hello...
-        <br>
-         <select kendo-drop-down-list
-                 k-option-label="'Select a computer'"
-                 k-data-text-field="'name'"
-                 k-data-value-field="'id'"
-                 k-data-source="vm.computers"></select>
+    <div>
+    <select kendo-drop-down-list
+            k-options="vm.computerOptions"
+            k-on-change="vm.computerChange(kendoEvent)"
+            ng-model="selectedComputer">
+            </select>
     </div>
+    <div>
+        <h4 id="choice" ng-show="vm.computerChosen">You chose the {{selectedComputer}}</h4>
+    </div>
+</div>
