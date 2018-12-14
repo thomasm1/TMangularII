@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"> 
+    <link href="app/css/bootstrap.css" rel="stylesheet" />
+    <link href="//cdn.kendostatic.com/2014.1.318/styles/kendo.common.min.css" rel="stylesheet" type="text/css" />
+    <link href="//cdn.kendostatic.com/2014.1.318/styles/kendo.silver.min.css" rel="stylesheet" type="text/css" />
+    <link href="//cdn.kendostatic.com/2014.1.318/styles/kendo.silver.mobile.min.css" rel="stylesheet" type="text/css" />
+    <link href="//cdn.kendostatic.com/2014.1.318/styles/kendo.dataviz.min.css" rel="stylesheet" type="text/css" />
+    <link href="//cdn.kendostatic.com/2014.1.318/styles/kendo.dataviz.default.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="app/css/bootstrap.cerulean.min.css">
+    <link rel="stylesheet" href="bower_components/toastr/toastr.min.css">
+    <title>Dew Sensors</title>
+</head>
+<body ng-app="app">
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="home">TMangular II</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="schools">Sensors<span class="sr-only"> </span></a></li>
+                <!-- <li><a ui-sref="controllers">Sensor Controllers</a></li> -->
+                <li><a ui-sref="classrooms">Subsensors</a></li>
+                <li><a ui-sref="activities">Supersensors</a></li>
+                <!-- <li><a ui-sref="controllers">SenseControllers</a></li>
+                
+         .when('/dataSource', {templateUrl: 'app/dataSource/dataSource.html'})
+         .when('/dataVizualization', {templateUrl: 
+         .when('/globalEvents', {templateUrl: 'app/globalEvents/globalEvents.html'})
+         .when('/modal', {templateUrl: 'app/modal/modalWindow.html'})
+         .when('/order', {templateUrl: 'app/order/order.html'})
+         .when('/welcome2', { templateUrl: 'app/welcome/welcome2.html' })
+         .when('/welcome3', { templateUrl: 'app/welcome/Welcome3.html' })
+         .otherwise({ redirectTo: '/' }); // go to the welcome page
+                -->
+            
+            
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav> 
+<div ui-view></div>
+
+<!-- Libraries -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/toastr/toastr.min.js"></script> 
+        
+<!-- Angular -->
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script> 
+<script src="scripts/kendo.all.min.js"></script>
+<script src="scripts/angular-kendo.js"></script>
+
+<!-- Application code -->
+<script src="app/app.js"></script>
+<script src="app/services/dataService.js"></script>
+<script src="app/services/dataSource.js"></script>
+<script src="app/services/notifier.js"></script>
+
+<script src="app/filters/activityMonthFilter.js"></script>
+<script src="app/controllers/HomeController.js"></script>
+<script src="app/controllers/AllSchoolsController.js"></script>
+<script src="app/controllers/AllClassroomsController.js"></script>
+<script src="app/controllers/AllActivitiesController.js"></script>
+<script src="app/controllers/ClassroomController.js"></script>
+<script src="app/controllers/ClassroomSummaryController.js"></script>
+<script src="app/controllers/ClassroomMessageController.js"></script>
+ 
+    <script src="app/controllers/welcome.js"></script> 
+    <script src="app/controllers/globalEvents.js"></script>
+    <script src="app/controllers/order.js"></script>
+    <script src="app/controllers/dataViz.js"></script>
+</body>
+</html>
