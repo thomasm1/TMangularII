@@ -2,15 +2,45 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8"> 
+  <meta name="description" content="Sociology Data Analysis, Web Development and Statistical Consulting | Statistical Consultant. Get statistics help: 
+Thomas offers services related to analyzing qualitative &amp; quantitative data and reporting results in academic journals and business briefs alike.  Recent projects include research design, app design, and proof-of-concept for Xpansiv Data Systems, 
+and data analysis and web-application implementation. Data analysis and special pricing offers competitive benefits for clients.  
+If you need help with R, Python, Stata or SPSS, contact Thomas Maestas. Thomas will perform the analysis for you so you can focus on your
+ project and avoid the web and statistical package learning curve.">
+
+  <meta name="keywords" content="  data analysis and visualization, sociology statistical tests">
+  <meta name="author" content="Thomas Maestas">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
     <link href="app/css/bootstrap.css" rel="stylesheet" />
-    <link href="//cdn.kendostatic.com/2014.1.318/styles/kendo.common.min.css" rel="stylesheet" type="text/css" />
-    <link href="//cdn.kendostatic.com/2014.1.318/styles/kendo.silver.min.css" rel="stylesheet" type="text/css" />
-    <link href="//cdn.kendostatic.com/2014.1.318/styles/kendo.silver.mobile.min.css" rel="stylesheet" type="text/css" />
-    <link href="//cdn.kendostatic.com/2014.1.318/styles/kendo.dataviz.min.css" rel="stylesheet" type="text/css" />
-    <link href="//cdn.kendostatic.com/2014.1.318/styles/kendo.dataviz.default.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="app/css/bootstrap.cerulean.min.css">
-    <link rel="stylesheet" href="bower_components/toastr/toastr.min.css">
-    <title>Dew Sensors</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"> 
+    <link href="//cdn.kendostatic.com/2014.1.318/styles/kendo.common.min.css"  rel="stylesheet"  />
+    <link href="//cdn.kendostatic.com/2014.1.318/styles/kendo.silver.min.css" rel="stylesheet"  />
+    <link href="//cdn.kendostatic.com/2014.1.318/styles/kendo.silver.mobile.min.css" rel="stylesheet"  />
+    <link href="//cdn.kendostatic.com/2014.1.318/styles/kendo.dataviz.min.css" rel="stylesheet"  />
+    <link href="//cdn.kendostatic.com/2014.1.318/styles/kendo.dataviz.default.min.css" rel="stylesheet"  />
+    <link rel="stylesheet" href="app/css/bootstrap.cerulean.min.css" />
+    <link rel="stylesheet" href="dist/css/app.css" />
+    
+  <style>
+    .ui-view {
+      margin-top:50px;
+    }
+    .alpho0 {
+      color:darkcyan;
+    } 
+    h1.title {
+      display:none;
+    }
+    input {
+      color:yellow;
+      background:darkblue;
+    }
+    a {
+        color:yellow;
+    }
+  </style>
 </head>
 <body ng-app="app">
 
@@ -27,46 +57,62 @@
             <a class="navbar-brand" ui-sref="home">TMangular II</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Collect the nav links, forms, and other content for toggling   -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a ui-sref="schools">Sensors<span class="sr-only"> </span></a></li>
+                <li><a ui-sref="about" ui-sref-active="active">About</a></li>
+                <li><a ui-sref="schools" ui-sref-active="active">Sensors<span class="sr-only"> </span></a></li>
                 <!-- <li><a ui-sref="controllers">Sensor Controllers</a></li> -->
-                <li><a ui-sref="classrooms">Subsensors</a></li>
-                <li><a ui-sref="activities">Supersensors</a></li>
-                <!-- <li><a ui-sref="controllers">SenseControllers</a></li>
-                
-         .when('/dataSource', {templateUrl: 'app/dataSource/dataSource.html'})
-         .when('/dataVizualization', {templateUrl: 
-         .when('/globalEvents', {templateUrl: 'app/globalEvents/globalEvents.html'})
-         .when('/modal', {templateUrl: 'app/modal/modalWindow.html'})
-         .when('/order', {templateUrl: 'app/order/order.html'})
-         .when('/welcome2', { templateUrl: 'app/welcome/welcome2.html' })
-         .when('/welcome3', { templateUrl: 'app/welcome/Welcome3.html' })
-         .otherwise({ redirectTo: '/' }); // go to the welcome page
-                -->
-            
-            
+                <li><a ui-sref="classrooms" ui-sref-active="active">Subsensors</a></li>
+                <li><a ui-sref="activities" ui-sref-active="active">Supersensors</a></li>
+                <li><a ui-sref="dataViz" ui-sref-active="active">Data Viz</a></li> 
+                <li><a ui-sref="register" ui-sref-active="active">Login<br /><small>register</small></a></li> 
+             
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav> 
 <div ui-view></div>
 
+      <section class="home-quote">
+    <div class="row column medium-8 xxlarge-6">
+      <div class="quote-wrap">
+        <div class="quote">
+         
+        </div>
+      
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="row column">
+      <nav class="footer-nav">
+       
+<div ng-include="'views/footer.html'"></div>
+      </nav>
+    </div>
+ 
+  </footer>
+
 <!-- Libraries -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/toastr/toastr.min.js"></script> 
+<script src="scripts/jquery.min.js"></script> 
         
-<!-- Angular -->
-<script src="bower_components/angular/angular.min.js"></script>
-<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script> 
+ 
+<script src="
+   https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.20/angular-ui-router.min.js"></script> 
 <script src="scripts/kendo.all.min.js"></script>
 <script src="scripts/angular-kendo.js"></script>
 
 <!-- Application code -->
 <script src="app/app.js"></script>
+  <script src="components/posts.js"></script>
+  <script src="components/about.js"></script> 
+  <script src="components/maps.js"></script> 
+
 <script src="app/services/dataService.js"></script>
-<script src="app/services/dataSource.js"></script>
+<script src="app/services/dataSource.js"></script> 
 <script src="app/services/notifier.js"></script>
 
 <script src="app/filters/activityMonthFilter.js"></script>
@@ -78,9 +124,12 @@
 <script src="app/controllers/ClassroomSummaryController.js"></script>
 <script src="app/controllers/ClassroomMessageController.js"></script>
  
-    <script src="app/controllers/welcome.js"></script> 
+    <script src="app/controllers/register.js"></script> 
     <script src="app/controllers/globalEvents.js"></script>
-    <script src="app/controllers/order.js"></script>
-    <script src="app/controllers/dataViz.js"></script>
+    <script src="app/controllers/order.js"></script> 
+    <script src="app/controllers/dataViz.js"></script> 
+  <script src="dist/js/vendor.js"></script>
+
+  <script src="dist/js/main.js"></script>
 </body>
 </html>

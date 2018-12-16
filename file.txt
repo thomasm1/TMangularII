@@ -1,0 +1,14 @@
+v8
+global
+global
+
+_
+Math.random()
+_
+let dd = _ + 3
+let d= _
+_
+Math.random()
+_
+let v = _
+v

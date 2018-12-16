@@ -16,24 +16,46 @@
                 controller: 'HomeController',
                 controllerAs: 'home'
             })
-            .state('welcome', {
-                url: '/welcome',
-                templateUrl: '/app/templates/welcome.html',
-                controller: 'WelcomeController' 
+            .state('register', {
+                url: '/register',
+                templateUrl: '/app/templates/register.html',
+                controller: 'registerController' 
             }) 
+            .state('services', {
+                url: '/services',
+                templateUrl: 'views/services.html'
+            }) 
+            .state('about',  { 
+                url: '/about',
+                templateUrl: 'app/templates/about.html' 
+            } )
+            .state('post', {
+                url: '/posts/{postId}',
+                component: 'post',
+                resolve: {
+                post: function(PostsService, $transition) {
+                    return PostsService.getPost($transition.params().postId);
+                }
+                } 
+            })
+            .state('posts', { 
+                url: '/posts',
+                component: 'posts',
+                resolve: {
+                  posts: function(PostsService) {
+                    return PostsService.getAllPosts(); 
+                  }
+                }
+            })
             .state('dataSource', {
                 url: '/dataSource',
                 templateUrl: 'app/services/dataSource.html',
                 controller: 'dataSource' 
             })
-            .state('dataViz', {
-                url: '/dataViz',
-                templateUrl: 'app/templates/dataVizualization.html',
+            .state('dataViz', { 
+                url: '/dataviz',
+                templateUrl: 'views/dataviz.html'  ,
                 controller: 'dataViz' 
-            }) 
-            .state('modal', {
-                url: '/modal',
-                templateUrl: 'app/templates/modal.html' 
             }) 
             .state('schools', {
                 url: '/schools',

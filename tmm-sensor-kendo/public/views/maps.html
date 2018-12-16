@@ -1,0 +1,242 @@
+<div class="showcase jenks">
+  <div class="container jumb">
+    <h2 class="  dailytech ">TMM MAPS</h2>
+
+    <h4>Random Walk Classification Tree</h4>
+    <div id="start" style="top:100px;position:fixed;overflow:visible;" width="700px" height="400px"></div>
+    <script>
+      
+      var canvas = document.getElementById("start"),
+          context = canvas.getContext("2d"),
+          width = canvas.width,
+          height = canvas.height,
+          color = d3.scaleSequential(d3.interpolateRainbow).domain([0, 1000]),
+          randomX = d3.randomNormal(0.3),
+          randomY = d3.randomNormal(0);
+      
+      render();
+      
+      canvas.onclick = render;
+      
+      function render() {
+        var x0 = width / 20,
+            y0 = height / 2,
+            mainWalk = randomWalk(x0, y0, 1000);
+      
+        context.clearRect(0, 0, width, height);
+        context.lineJoin = "round";
+        context.lineCap = "round";
+        context.lineWidth = 1.5;
+        context.strokeStyle = "black";
+        renderWalk(mainWalk);
+      
+        context.globalCompositeOperation = "multiply";
+        context.lineWidth = 1;
+        for (var i = 0; i < mainWalk.length; i += 2) {
+          var branchStart = mainWalk[i],
+              x0 = branchStart[0],
+              y0 = branchStart[1];
+          for (var j = 0; j < 1; ++j) {
+            context.strokeStyle = color(i + (Math.random() - 0.5) * 50);
+            var x1 = x0, y1 = y0;
+            for (var k = 0, m = 20; k < m; ++k) {
+              context.globalAlpha = (m - k - 1) / m;
+              var pieceWalk = randomWalk(x1, y1, 10),
+                  pieceEnd = pieceWalk[pieceWalk.length - 1];
+              renderWalk(pieceWalk);
+              x1 = pieceEnd[0];
+              y1 = pieceEnd[1];
+            }
+            context.globalAlpha = 1;
+          }
+        }
+      }
+      
+      function renderWalk(walk) {
+        var i, n = walk.length;
+        context.beginPath();
+        context.moveTo(walk[0][0], walk[0][1]);
+        for (i = 1; i < n; ++i) {
+          context.lineTo(walk[i][0], walk[i][1]);
+        }
+        context.stroke();
+      }
+      
+      function randomWalk(x0, y0, n) {
+        var points = new Array(n), i;
+        points[0] = [x0, y0];
+        for (i = 1; i < n; ++i) {
+          points[i] = [
+            x0 += randomX() * 2,
+            y0 += randomY() * 2
+          ];
+        }
+        return points;
+      }
+      
+      </script>
+    
+    <p class="lead">
+
+
+
+
+
+    </p>
+
+   
+
+  </div>
+
+  
+  <nav ng-controller="mapsCtrl" id="rightmenu" class="rightmenu col-md-2 d-none d-md-block bg-light sidebar">
+    <div class=" nav flex-column rightnav sidebar-sticky">
+      <div class="  list-group">
+        <a href="tmm_demo/index.html" class="  list-group-item list-group-item-action">DASHBOARD WEB-APP</a>
+        <a href="bsc/index.html" class="list-group-item list-group-item-action">1-PAGE WEB-APP</a> 
+         
+        <a href="d3line.html" class="list-group-item list-group-item-action">DAG DIRECTED ACYCLIC GRAPH TOOL</a>
+        <a href="codeplayer.html" class="hidden list-group-item list-group-item-action">CSS-JS-HTML CODE PLAYER</a>
+        <a href="dice/index.html" class="list-group-item list-group-item-action">JS DICE GAME</a>   
+        <a href="dist/docs/d3/globe_interact.html" class="list-group-item list-group-item-action">INTERACTIVE MAP</a> 
+        
+
+<button ng-click="render()">render</button>
+<button ng-click="toggleGreeting()">Greeting</button>
+
+<button ng-click="mapsCtrl.toggleGreeting()">Greeting</button>
+     
+<h3>August:</h3>
+<ul>
+ <li ng-repeat="maps in $mapsCtrl.maps">
+   <a ui-sref="map({ mapId: map.id })">
+     {{map.name}}
+ </a>
+ </li>
+</ul>
+</div>
+
+</div>
+</nav>
+ 
+<style>
+  .counties {
+    fill: none;
+  }
+
+  .states {
+    fill: none;
+    stroke: #fff;
+    stroke-linejoin: round;
+  }
+
+</style>
+
+<svg id="svg"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="dist/js/chlor.js">
+
+
+</script>
+ 
+<div id="a">
+  </div>
+ 
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+          <div class="panel panel-default">
+
+              <div class="panel-body  jenks   map-img">
+
+                    <script src="http://d3js.org/queue.v1.min.js"></script>
+                    <script src="http://d3js.org/topojson.v1.min.js"></script>
+                    <script src="https://d3js.org/d3-geo-projection.v1.min.js"></script>
+                    <script src="dist/js//lib/d3-tip.js"></script>
+                    <script src='https://unpkg.com/simple-statistics@2.0.0/dist/simple-statistics.min.js'></script>
+                    <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.10.3/babel.min.js'></script>
+                    <script src="dist/js/population.js" lang='babel' type='text/babel'>
+                  
+                    </script> 
+                
+            </div>
+
+          <div class="panel panel-default">
+
+
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+
+              <div class="panel-body ">
+                <div class="jenks"></div>
+<div class="jenks2"></div>
+
+
+<!-- these four must go before map -->
+                  <script src="http://d3js.org/queue.v1.min.js"></script>
+                  <script src="http://d3js.org/topojson.v1.min.js"></script>
+                  <script src="https://d3js.org/d3-geo-projection.v1.min.js"></script> 
+                <script src="dist/js/lib/d3-tip.js">  
+                </script>
+                <script src='dist/js/lib/jenks.js'></script> 
+
+              </div> 
+            </div> 
+          </div> 
+          <div class="panel panel-default"> 
+            <div class="panel-heading" role="tab" id="headingThree"> 
+              <h4 class="panel-title"> 
+         
+
+              </h4>
+
+            </div>
+
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+
+              
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+  
+
+
+
+
+
+  </div>
+
+</div>
+
+</div>
+
+
+
+
+ 
+
+<script src="dist/js/bundleTMM.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.min.js">
+
+
+    
