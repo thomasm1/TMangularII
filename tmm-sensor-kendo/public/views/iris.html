@@ -1,20 +1,20 @@
-
-  <title>TMM | Home</title> 
-
-   
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.9/d3.min.js"></script>
-
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.9/d3.min.js"></script>
   <script src="https://d3js.org/d3.v4.min.js"></script>
- -->
- <script src="dist/js/d3/d3v4.js"></script>
-  <link rel="stylesheet" href="dist/css/iris.css"/> 
- <style> 
-.charts { 
+  <link rel="stylesheet" href="iris.css"/> 
+<style>
+body {
+  background-color:aliceblue;
+} 
+.charts {
   min-height:80px; 
 }
 .d3 {
   min-height:500px;
-  background-color:lightblue; 
+  background-color:lightblue;
+  background-color:transparent;
   border:inset 2px blue; 
   display:none;
 }
@@ -23,27 +23,12 @@
   width:600px;
   margin:30px;
   border: solid 1px blue;   
-} 
-.six * {margin-top:440px;
 }
-.links {
-    max-width:400px; 
-}
-</style> 
+</style>
+</head>
 
-<nav id="rightmenu" class="rightmenu col-md-2 d-none d-md-block bg-light sidebar">
-  <div class=" nav flex-column rightnav sidebar-sticky">
-    <div class="  list-group"> 
-      <a href="http://www.thomasmaestas.net/dice/index.html"  class="list-group-item list-group-item-action">JAVASCRIPT DICE GAME</a>  
-      <a href="http://www.thomasmaestas.net/dag-dagre/index.html"  target="_blank" class="yellow  list-group-item list-group-item-action">DIRECTED ACYCLIC GRAPH TOOL</a>
-   
-   <br />
-    <a href="http://ourdailytech.net"   class=" list-group-item list-group-item-action com btn btn-primary"> 
-      <h4> ourdailytechblog.net</h4>
-    </a> 
-  </div>
-  </div>
-</nav>
+
+<body>
 <button id="one">one</button>
 <button id="two">two</button>
 <button id="three">three</button>
@@ -95,7 +80,7 @@ document.getElementById('one').addEventListener('click', function () {
       d.petal_width  = +d.petal_width;
       return d;
     }
-    d3.csv("data/iris.csv", type, render);
+    d3.csv("iris.csv", type, render);
 });
 </script>
 
@@ -108,23 +93,23 @@ document.getElementById('two').addEventListener('click', function () {
       var body = d3.selectAll(".two");
           
       function teleport(s){
-          s.transition().duration(500) // <-A
-              .style("width", "100px")
+          s.transition().duration(1000) // <-A
+              .style("width", "200px")
               .style("height", "1px")
           .transition().duration(500) // <-B
-              .style("left", "400px")
+              .style("left", "600px")
           .transition().duration(1000) // <-C
-              .style("left", "400px")
-              .style("height", "40px")
-              .style("width", "40px");
+              .style("left", "800px")
+              .style("height", "80px")
+              .style("width", "80px");
       };
       
       body.append("div")    
-              .style("position", "relative") /// fixed
+              .style("position", "fixed")
               .style("background-color", "steelblue")
               .style("left", "10px")
-              .style("width", "40px")
-              .style("height", "40px")
+              .style("width", "80px")
+              .style("height", "80px")
               .call(teleport); // <-D    
 });
 
@@ -328,52 +313,6 @@ var id= 0,
   
   <script src="transitionMulti.js"></script>
   
-  <script src=""></script>
-  
-  <link rel="stylesheet" type="text/css" href="dist/css/styles.css" />
-  -->
+  <script src=""></script>-->
+</body>
  
-
-  <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
-
-    <h3>{{ home.message }}</h3>
-
-    <h5>Number of sensors listed:  {{ home.schoolCount }}</h5>
-    <h5>Number of subsensors listed:  {{ home.classroomCount }}</h5>
-    <h5>Number of supersensors listed:  {{ home.activityCount }}</h5>
-
-    <button  class="btn btn-primary">Refresh</button>
-
-</div>
-<div class="links">
-    <pre> 
-    
-    FIREBASE 
-    <br />
-    Static Hosting
-    <br />
-    <br />
-    <a href="https://ourdailytechdata.firebaseapp.com" target="_blank">https://ourdailytechdata.firebaseapp.com</a>
-    <a href="https://tm-host.firebaseapp.com" target="_blank">https://tm-host.firebaseapp.com</a>
-    <br />
-    <br />
-    AWS 
-    <br />
-    Serverless Functions, Hosting
-    <br />
-    <br />
-    <a href="http://abq-aws-thomas-maestas.s3-website-us-east-1.amazonaws.com" target="_blank">http://abq-aws-thomas-maestas.s3-website-us-east-1.amazonaws.com</a>
-    <a href="https://s3.amazonaws.com/tmm-nov/index.html" target="_blank">https://s3.amazonaws.com/tmm-nov/index.html</a>
-    <br />
-    <br />
-
-    ENDPOINTS<br />
-    Amazon S3 Static NoSQL Storage
-    <br />
-    <br />
-    <a href="https://s3.amazonaws.com/tmm-nov/posts/april.json" target="_blank">https://s3.amazonaws.com/tmm-nov/posts/april.json</a>
-    Amazon RDS Relational PostgreSQL Database
-    
-    <a href="sensor-instance.caq9hvksjohf.us-east-1.rds.amazonaws.com" target="_blank">sensor-instance.caq9hvksjohf.us-east-1.rds.amazonaws.com</a>
-    </pre>
-</div> 
