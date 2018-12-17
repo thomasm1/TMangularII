@@ -18,11 +18,11 @@
   border:inset 2px blue; 
   display:none;
   position:absolute;
-  top:300px;
+  top:100px;
 }
 .one, .two, .three, .four, .five, .six {
   float:left;
-  width:700px;
+  width:600px;
   margin:10px;
   border: solid 1px blue;   
 } 
@@ -32,7 +32,8 @@
     max-width:500px;  
     float:right;
     position:absolute;
-    top:650px;
+    top:500px;
+    margin:10px;
 }
 pre {
     color:white;
@@ -216,7 +217,7 @@ document.getElementById('five').addEventListener('click', function () {
    
 
   var data = ["Cat", "Dog", "Cat", "Dog", "Cat", "Dog", "Cat", "Dog"],
-        duration = 1500;
+        duration = 800;
 
     d3.selectAll(".five").selectAll("div")
             .data(data)
@@ -247,7 +248,7 @@ document.getElementById('six').addEventListener('click', function () {
   d3.selectAll(".six").style("display","block"); 
 var id= 0,
         data = [],
-        duration = 500,
+        duration = 200,
         chartHeight = 100,
         chartWidth = 680;
 
@@ -314,7 +315,7 @@ var id= 0,
         data.shift();
         push(data);
         render(data);
-    }, 2000);
+    }, 1000);
 
     render(data);
 
@@ -353,9 +354,7 @@ var id= 0,
     <h5>Number of sensors listed:  {{ home.schoolCount }}</h5>
     <h5>Number of subsensors listed:  {{ home.classroomCount }}</h5>
     <h5>Number of supersensors listed:  {{ home.activityCount }}</h5>
-
-    <button  class="btn btn-primary">Refresh</button>
-
+ 
 </div>
 <div class="links">
 <h4>Cloud Demo Links</h4>
@@ -375,6 +374,6 @@ var id= 0,
     Amazon S3 Static NoSQL Storage
     <a href="https://s3.amazonaws.com/tmm-nov/posts/april.json" target="_blank">https://s3.amazonaws.com/tmm-nov/posts/april.json</a>
     Amazon RDS Relational PostgreSQL Database 
-    <a href="sensor-instance.caq9hvksjohf.us-east-1.rds.amazonaws.com" target="_blank">sensor-instance.caq9hvksjohf.us-east-1.rds.amazonaws.com</a>
+    <a  >sensor-instance.caq9hvksjohf.us-east-1.rds.amazonaws.com</a>
     </pre>
 </div> 
