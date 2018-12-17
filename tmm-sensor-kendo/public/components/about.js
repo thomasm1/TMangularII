@@ -1,4 +1,4 @@
-angular.module('tmm').component('about', {
+angular.module('app').component('about', {
   templateUrl:  'views/about.html',
   controller: 'aboutController', function () {
     aboutController.greeting = 'About TMM';

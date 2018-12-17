@@ -12,11 +12,12 @@
                 vm.allSchools = schools;
             })
             .catch(showError);
-
+            console.log(message,' AllSchool');
+/*
         function showError(message) {
             notifier.error(message);
         }
-
+*/
     }
 
 }());

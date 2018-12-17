@@ -13,65 +13,75 @@
   min-height:80px; 
 }
 .d3 {
-  min-height:500px;
-  background-color:lightblue; 
+  min-height:400px;
+  background-color:transparent; 
   border:inset 2px blue; 
   display:none;
+  position:absolute;
+  top:300px;
 }
 .one, .two, .three, .four, .five, .six {
   float:left;
-  width:600px;
-  margin:30px;
+  width:700px;
+  margin:10px;
   border: solid 1px blue;   
 } 
 .six * {margin-top:440px;
 }
 .links {
-    max-width:400px; 
+    max-width:500px;  
+    float:right;
+    position:absolute;
+    top:650px;
+}
+pre {
+    color:white;
+    background: url('dist/images/bluechipTile.jpg');
 }
 </style> 
 
 <nav id="rightmenu" class="rightmenu col-md-2 d-none d-md-block bg-light sidebar">
   <div class=" nav flex-column rightnav sidebar-sticky">
-    <div class="  list-group"> 
-      <a href="http://www.thomasmaestas.net/dice/index.html"  class="list-group-item list-group-item-action">JAVASCRIPT DICE GAME</a>  
+    <div class="  list-group">  
       <a href="http://www.thomasmaestas.net/dag-dagre/index.html"  target="_blank" class="yellow  list-group-item list-group-item-action">DIRECTED ACYCLIC GRAPH TOOL</a>
-   
+      <a href="http://www.thomasmaestas.net/dice/index.html" target="_blank"  class="list-group-item list-group-item-action">JAVASCRIPT DICE GAME</a> 
+     <a href="https://www.thomasmaestas.net/tmm_demo/index.html"  target="_blank" class="  list-group-item list-group-item-action">DASHBOARD WEB-APP</a>
+                      <a href="http://www.thomasmaestas.net/bsc/index.html"  target="_blank" class="list-group-item list-group-item-action">1-PAGE WEB-APP</a>    
+
    <br />
-    <a href="http://ourdailytech.net"   class=" list-group-item list-group-item-action com btn btn-primary"> 
-      <h4> ourdailytechblog.net</h4>
+    <a href="http://ourdailytech.net"  target="_blank"  class=" list-group-item list-group-item-action com btn btn-primary"> 
+      <h4>DAILY TECH BLOG</h4>
     </a> 
+
+
   </div>
   </div>
 </nav>
-<button id="one">one</button>
+<button id="one">data source</button>
+<!--
 <button id="two">two</button>
 <button id="three">three</button>
-<button id="four">four - transition</button>
-<button id="five">five</button>
-<button id="six">six - data generation</button>
+-->
+<button id="four">data transition</button>
+<button id="five">data transform</button>
+<button id="six"> data generation</button>
 
 <div class="charts">
         <div class="d3 one">
         </div>
   <div class="d3 two">
-    <div></div>
-    <div></div>
+    <div></div> 
     </div>
-          <div class="d3 three">
-            <div></div>
+          <div class="d3 three"> 
             <div></div>
           </div>
-    <div class="d3 four">
-      <div></div>
+    <div class="d3 four"> 
       <div></div>
       </div>
-<div class="d3 five">
-  <div></div>
+<div class="d3 five"> 
   <div></div>
 </div>
-          <div class="d3 six">
-            <div></div>
+          <div class="d3 six"> 
             <div></div>
           </div> 
 </div>  
@@ -100,6 +110,8 @@ document.getElementById('one').addEventListener('click', function () {
 </script>
 
 <script>
+
+/*
 document.getElementById('two').addEventListener('click', function () {
     
     console.log("You finally clicked without jQuery");
@@ -168,7 +180,7 @@ return d.name;
 });
   
 });
-
+*/
 
 document.getElementById('four').addEventListener('click', function () {
   console.log("You finally clicked without jQuery");
@@ -346,34 +358,23 @@ var id= 0,
 
 </div>
 <div class="links">
+<h4>Cloud Demo Links</h4>
     <pre> 
     
-    FIREBASE 
-    <br />
-    Static Hosting
-    <br />
-    <br />
+    FIREBASE  
+    Static Hosting 
     <a href="https://ourdailytechdata.firebaseapp.com" target="_blank">https://ourdailytechdata.firebaseapp.com</a>
     <a href="https://tm-host.firebaseapp.com" target="_blank">https://tm-host.firebaseapp.com</a>
-    <br />
-    <br />
-    AWS 
-    <br />
+    <br /> 
+    AWS  
     Serverless Functions, Hosting
-    <br />
-    <br />
     <a href="http://abq-aws-thomas-maestas.s3-website-us-east-1.amazonaws.com" target="_blank">http://abq-aws-thomas-maestas.s3-website-us-east-1.amazonaws.com</a>
     <a href="https://s3.amazonaws.com/tmm-nov/index.html" target="_blank">https://s3.amazonaws.com/tmm-nov/index.html</a>
-    <br />
-    <br />
-
-    ENDPOINTS<br />
+    <br /> 
+    DATA ENDPOINTS -
     Amazon S3 Static NoSQL Storage
-    <br />
-    <br />
     <a href="https://s3.amazonaws.com/tmm-nov/posts/april.json" target="_blank">https://s3.amazonaws.com/tmm-nov/posts/april.json</a>
-    Amazon RDS Relational PostgreSQL Database
-    
+    Amazon RDS Relational PostgreSQL Database 
     <a href="sensor-instance.caq9hvksjohf.us-east-1.rds.amazonaws.com" target="_blank">sensor-instance.caq9hvksjohf.us-east-1.rds.amazonaws.com</a>
     </pre>
 </div> 

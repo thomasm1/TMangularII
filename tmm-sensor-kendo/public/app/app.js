@@ -21,9 +21,9 @@
                 templateUrl: '/app/templates/register.html',
                 controller: 'registerController' 
             }) 
-            .state('services', {
-                url: '/services',
-                templateUrl: 'views/services.html'
+            .state('portfolio', {
+                url: '/portfolio',
+                templateUrl: '/app/templates/portfolio.html'
             }) 
             .state('about',  { 
                 url: '/about',

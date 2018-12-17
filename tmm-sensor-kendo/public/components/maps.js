@@ -1,4 +1,4 @@
-angular.module('tmm').component('maps', {
+angular.module('app').component('maps', {
   bindings: { maps: '<' },  
   templateUrl:  'views/maps.html',
   controller: 'mapsController',

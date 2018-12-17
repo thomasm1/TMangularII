@@ -7,20 +7,20 @@
 
         toastr.options = {
             "showDuration": "300",
-            "timeOut": "2000"
+            "timeOut": "500" //2000
         };
 
         return {
             success: success,
-            error: error
+            error:   success  // error disabled
         };
 
-        function success(message) {
-            toastr.success(message);
+        function success(message) {  
+            toastr.success(''); //message
         }
 
-        function error(message) {
-            toastr.error(message);
+        function error(message) { // message
+            toastr.error(''); // message
         }
     }
 

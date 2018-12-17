@@ -35,6 +35,12 @@
         function showError(message) {
             notifier.error(message);
         }
+        console.log(message,' AllSchool');
+/*
+    function showError(message) {
+        notifier.error(message);
+    }
+*/
 
     }
 

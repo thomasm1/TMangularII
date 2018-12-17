@@ -1,4 +1,4 @@
-angular.module('tmm').component('posts', {
+angular.module('app').component('posts', {
   bindings: { posts: '<' }, 
   template: '<h3>August:</h3>' +
             '<ul>' +

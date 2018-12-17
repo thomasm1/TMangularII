@@ -1,4 +1,4 @@
-angular.module('tmm').component('home', { 
+angular.module('app').component('home', { 
   controller: 'homeController',
   controllerAs: 'homeCtrl', function() {
     homeCtrl.greeting = 'Welcome to TMM';
