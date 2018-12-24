@@ -10,8 +10,9 @@
 	console.log(' AboutController loaded...');
  
  
-/*
+ 
 	console.log('header');
+	/*
 	var headerauth = "--Ryan Dahl, Creator of JavaScript's Node.JS";
 	var headerquote = `  
 	 <strong>You Can Never Understand Everything.<br /><br />But You can Push Yourself to Understand the System.</strong>	 
@@ -20,8 +21,8 @@
 	<p class="left" id="headerquote">
 	${headerquote}</p>  <p> -- ${headerauth} </p>
 	`;
-	*/ 
  
+ */
 	var secretButton = document.querySelector('#secret-button'); // ME
 	var secretParagraph = document.querySelector('#secret-paragraph');
 

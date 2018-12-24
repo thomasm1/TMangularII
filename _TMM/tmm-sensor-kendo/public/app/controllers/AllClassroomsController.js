@@ -6,6 +6,7 @@
     function AllClassroomsController(dataService, notifier) {
 
         var vm = this;
+        message = 'no message yet ..';
 
         dataService.getAllClassrooms()
             .then(function(classrooms) {
@@ -14,11 +15,11 @@
             .catch(showError);
 
             console.log(message,' AllSchool');
-/*
+ 
         function showError(message) {
             notifier.error(message);
         }
-*/
+ 
 
     }
 

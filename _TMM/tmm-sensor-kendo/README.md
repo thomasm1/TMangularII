@@ -1,3 +1,5 @@
+#### npm start for server to 3005; tmm, http in public
+
 ## GENERATORS:
 * Text Content Generator - http://www.lipsum.com
 * Favicon Generator - http://tools.dynamicdrive.com/favicon		

@@ -72,6 +72,16 @@ pre {
 
 
   </div>
+  
+ 
+  <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 pull-right">
+  <h2 class="dailytech">IoT Data Recorder</h2> 
+    <h3>{{ home.message }}</h3> 
+    <h5>Number of sensors listed: </h5>  <p>{{ home.schoolCount }}</p>
+    <h5>Number of subsensors listed:  </h5><p>{{ home.classroomCount }}</p>
+    <h5>Number of supersensors listed:  </h5><p>{{ home.activityCount }}</p>
+  
+</div>
   </div>
 </nav>
 <button id="one">data source</button>
@@ -111,17 +121,6 @@ pre {
   
   <link rel="stylesheet" type="text/css" href="dist/css/styles.css" />
   -->
- 
-  <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
-  <h2 class="dailytech">WELCOME  TO  TMM</h2>
-<!--
-    <h3>{{ home.message }}</h3> 
-    <h5>Number of sensors listed:  {{ home.schoolCount }}</h5>
-    <h5>Number of subsensors listed:  {{ home.classroomCount }}</h5>
-    <h5>Number of supersensors listed:  {{ home.activityCount }}</h5>
- -->
-  
-</div>
 
   <div class="svgHolder"   id="force"></div> 
   <script type="text/javascript" src="dist/js/d3/dag.js"></script>

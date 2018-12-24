@@ -130,7 +130,7 @@ If you need help with R, Python, Stata or SPSS, contact Thomas Maestas. Thomas w
 
           <li>
 
-            <a title="linkedin" href="http://linkedin.com/in/thomasmaestas" target="_blank">
+            <a title="linkedin" href="httpd://linkedin.com/in/thomasmaestas" target="_blank">
 
               <i class="fa fa-linkedin"></i>
 
@@ -143,12 +143,7 @@ If you need help with R, Python, Stata or SPSS, contact Thomas Maestas. Thomas w
                 <li><a ui-sref="about" ui-sref-active="active">About</a></li>
                 <li><a ui-sref="profile" ui-sref-active="active">Profile</a></li>
                 <li><a ui-sref="chlor" ui-sref-active="active">Maps</a></li> 
-                <li><a ui-sref="dendro" ui-sref-active="active">Nodes</a></li> 
-<!--
-                <li><a ui-sref="schools" ui-sref-active="active">Sensors<span class="sr-only"> </span></a></li>
-                 <li><a ui-sref="controllers">Sensor Controllers</a></li> 
-                <li><a ui-sref="classrooms" ui-sref-active="active">Subsensors</a></li>
-                <li><a ui-sref="activities" ui-sref-active="active">Supersensors</a></li>-->
+                <li><a ui-sref="dendro" ui-sref-active="active">Nodes</a></li>  
                 <li><a ui-sref="dataViz" ui-sref-active="active">Data Viz</a></li> 
              
             </ul>
@@ -169,11 +164,19 @@ If you need help with R, Python, Stata or SPSS, contact Thomas Maestas. Thomas w
       <section class="home-quote">
     <div class="row column medium-8 xxlarge-6">
       <div class="quote-wrap">
-        <div class="quote">
-      
+        <div class="quote"> 
       </div>
     </div>
-  </section> 
+  </section>
+  <section>
+  <div class="pull-right">
+  <ul>
+  
+                <li><a ui-sref="schools" ui-sref-active="active">Sensors<span class="sr-only"> </span></a></li> 
+                <li><a ui-sref="classrooms" ui-sref-active="active">Subsensors</a></li>
+                <li><a ui-sref="activities" ui-sref-active="active">Supersensors</a></li> </ul>
+  </div>
+  </section>
   <footer class="site-footer">
     <div class="row column">
       <nav class="footer-nav">
@@ -215,6 +218,7 @@ If you need help with R, Python, Stata or SPSS, contact Thomas Maestas. Thomas w
 <script src="app/controllers/ClassroomController.js"></script>
 <script src="app/controllers/ClassroomSummaryController.js"></script>
 <script src="app/controllers/ClassroomMessageController.js"></script>
+<script src="app/dtech/dtech.js"></script>
  
     <script src="app/controllers/register.js"></script> 
     <script src="app/controllers/globalEvents.js"></script>

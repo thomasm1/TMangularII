@@ -64,7 +64,7 @@
             })
             .state('dataViz', { 
                 url: '/dataviz',
-                templateUrl: 'app/templates/dataviz.html'  ,
+                templateUrl: 'app/templates/dataViz.html'  ,
                 controller: 'dataViz' 
             }) 
             .state('schools', {
@@ -156,8 +156,11 @@
         
            $log.debug('successfully changed states'); 
            $log.debug('event', event);
+           console.log(event);
            $log.debug('toState', toState);
+           console.log(toState);
            $log.debug('toParams', toParams);
+           console.log(toParams);
            $log.debug('fromState', fromState);
            $log.debug('fromParams', fromParams);
         });

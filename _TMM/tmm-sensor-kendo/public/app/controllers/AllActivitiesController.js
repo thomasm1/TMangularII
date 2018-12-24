@@ -6,6 +6,7 @@
     function AllActivitiesController(dataService, notifier, $state, activities, $log) {
 
         var vm = this;
+        message = 'no message yet ..';
 
         vm.selectedMonth = 1; // default to January
 
@@ -36,11 +37,8 @@
             notifier.error(message);
         }
         console.log(message,' AllSchool');
-/*
-    function showError(message) {
-        notifier.error(message);
-    }
-*/
+  
+ 
 
     }
 
