@@ -1,0 +1,1290 @@
+/*   overrides */
+
+body {
+   
+  background-color:black;
+ opacity:.95;
+  max-width:950px;
+  margin-left:auto;
+margin-right:auto;
+ 
+}
+#divContainer {
+  max-width:850px;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:98%;
+
+}
+
+
+#search {
+margin-left:10px;
+    margin-top: -10px; 
+    margin-right: 10px; 
+  color:yellow; 
+  background-color:#0f85d4; 
+  opacity:.9;
+
+}
+ 
+/* general overrides */
+
+.list-group-item .glyphicon {
+
+  line-height: 1.4;
+
+}
+div#userModal.modal.fade {
+  display:none;   
+}
+.modal-header .close {
+
+  margin-top: 4px;
+
+}
+
+div#userModal.modal.fade {
+  display:none;
+}
+strong {
+
+  font-weight: bold;
+
+}
+
+/*
+
+  adjusting headline bg color
+
+   */
+
+.bg-primary {
+
+  /* background-color: #6aa0e6 !important;
+
+*/
+
+  background-color:#00b0ec  ;}
+
+
+.tmm {
+
+opacity: 1;
+
+width: 230px;
+
+}
+.card-title {
+
+  font-size:1.2em; 
+
+}
+/* profilepic*/
+
+.profile {
+
+    margin-left: 10px;
+max-width:150px;
+
+}
+li.nav-item.ml-2 { 
+  position:relative;
+ 
+
+}
+.ml-2 {
+    list-style-type: none;
+    margin-top:0px;
+    margin-right:10px;
+}
+/* welcome and text*/
+
+.mb-4 { 
+  font-weight:800;
+  
+    list-style-type: none;
+text-align:center;
+color:white;
+  border:0px solid red;
+    box-shadow: 0px 10px 50px silver; 
+      background-color: #00b0ec;
+  background-image: url('../img/MaestasReykjavikBanner20.png');   
+  border-radius:0px;
+  border:0px solid red;
+   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);	 
+
+}
+  .mb-4 a { 
+color:#59f3ff ; 
+text-align:center;
+} 
+.text-inherit { 
+	color:white;
+}  
+.card-block.mb-3 {
+  margin-top:20px;
+  color:white;
+}
+
+.card.card-link-list#footer  {
+ color:white;
+ min-width:100%;
+ background-color:#3097D1 !important;
+ text-align:center; 
+ margin-top:10px;
+ border-radius:0px;
+ border:0px solid red;
+ box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);	 
+} 
+
+.card.card-link-list#footer a { 
+    color:white;
+} 
+
+.card.card-link-list#footer a:hover {
+    color:#00d5f6;
+} 
+
+#div5 {
+  overflow:hidden;
+}
+
+
+div#cal.card-block {
+  display:none;
+}
+#cal {
+padding-top:20px;   
+margin-left:auto;
+margin-right:auto;
+background-color:transparent;
+opacity:.9;
+min-width:500px;
+}
+
+.bu {
+
+	width:35px;
+    padding :2px;
+    margin-top:3px;
+    margin-right:2px;
+	background-color: #9ac9e7;
+}
+
+#window { 
+    background-color:transparent; 
+    width:160px;  
+    font-size:1.1em; 
+    opacity:.9; 
+	color:white; 
+    margin-top:0px; 
+	margin-left:auto;
+	margin-right:auto;
+    padding:5px 5px 3px;
+    height: 30px;
+    line-height:1.1em;
+}
+
+div.card-header {  
+	margin-top:5px;
+	background-color: #00b0ec;
+	background-image: url('../img/MaestasReykjavikBanner20.png'); 
+	padding-top:20px;
+  min-height:180px;
+  border:0px solid red;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+  font-size:1.2em;
+
+   	
+
+  }
+
+   
+
+ .list-group-item {
+    background-color:#00b0ec;
+ }
+
+/* post picture 
+
+div.col-lg-6  {
+
+    margin-top:20px;
+
+        background-color:red;
+
+  }
+
+      */
+
+/* blocks 2, 3 */
+
+  div.card.visible-md-block.visible-lg-block   { 
+
+	margin-top:0px;
+	background-color: #00b0ec;
+	background-image: url('../img/MaestasReykjavikBanner20.png'); 
+	padding-top:30px;
+  min-height:230px;
+  border-radius:0px;
+  border:0px solid red;
+   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);	 
+  } 
+  p.mb-4 {
+
+    margin-top: 20px;
+     margin-bottom: 10px;
+     padding:5px;
+  } 
+div.card-header {
+ min-height:480px;
+}
+
+li.card-menu-item {
+  margin-top:10px;
+line-height:110%;
+list-style-type:none;
+}
+
+div.card-block img {
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    border: 0px solid blue;
+    background-color:#00b0ec;
+    font-weight:800;
+    }
+
+ 
+
+div.card-block.text-center a {
+  background-color:transparent;  
+}
+
+div.card-block.text-center {
+	background-color:transparent;
+  box-shadow: 0px 10px 50px transparent;	
+  font-weight:800;
+}
+
+ /* blocks 2, 3 */ 
+li#div1m.media.list-group-item.p-4 {
+   margin-top:20px;
+   background-color: #00b0ec;
+background-image: url('../img/MaestasReykjavikBanner20.png'); 
+	padding-top: 0px;
+  min-height:180px;
+  border-radius:0px;
+  border:0px solid red;
+   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);	 
+  }
+ 
+/* navbar */
+
+
+
+.app-navbar {
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+.app-navbar .form-control {
+  box-shadow: none;
+}
+.app-navbar .navbar-brand img {
+  width: 140px;
+  margin-top: 10px;
+  margin-bottom:0px;
+}
+
+.app-navbar .navbar-collapse {
+  max-height: inherit;
+}
+.app-navbar .navbar-collapse:after {
+  height: 100vh;
+}
+.app-navbar .form-control {
+
+  border-color: #1C73A5;
+
+}
+
+/* .app-navbar .app-notifications {
+
+  margin-left: 1rem;
+
+  padding-bottom: 4px !important;
+
+  padding-top: 4px !important;
+
+}
+
+.app-notifications .icon:before {
+
+  font-size: 20px;
+
+}
+
+*/
+
+@media (min-width: 100px) {
+  .app-navbar .navbar-collapse:after {
+    height: auto;
+  }
+}
+@media (max-width: 100px) {
+  .app-search {
+    margin-top: -10px;
+  }
+}
+ /* social media dynamic drive */
+
+div.slideouticons{ /* main container for slide out icons */
+  position: relative; /* change position to fixed or absolute if desired */
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  z-index: 1000;
+
+}
+.slideout {
+  position:relative; 
+  left:17px; 
+  margin-right:3px;
+  z-index:4; 
+}
+div.slideouticons input{
+  display: none;
+}
+
+div.slideouticons label.mainlabel{ /* menu anchor icon style */
+
+  position: relative;
+  top:-5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 25px; /* font size, pertains to icon fonts specifically */
+  width: 48px; /* width of anchor icon */
+  height: 48px; /* height of anchor icon */
+  text-align: center;
+  color: white;
+  background: #00d5f6;
+  border-radius: 50%;
+  outline: none;
+  z-index: 100000;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+div.slideouticons div.iconswrapper{ /* DIV that flips over to reveal the hidden icons */
+  position: absolute;
+  margin: 0;
+  top: 150px; /* vertical offset of icons wrapper from the top of main container */
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+
+div.slideouticons div.iconswrapper ul{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+}
+
+div.slideouticons div.iconswrapper ul li{
+  margin-bottom: 10px;
+  position: relative;
+    left:-15px;
+  opacity: 1;
+  width:40px; /* width of social icons */
+  height: 40px; /* height of social icons */
+  -webkit-transform: translateY(-100%) rotate(0);
+  transform: translateY(-100%) rotate(0);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+
+div.slideouticons div.iconswrapper ul li a{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 24px; /* font size, pertains to icon fonts specifically */
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  background: #00b0ec; /* background color of icons */
+  text-decoration: none;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+
+div.slideouticons div.iconswrapper ul li a:hover{
+  background:blue; /* back nd color of icons on hover */
+  color: white;
+}
+
+div.slideouticons input:checked ~ label.mainlabel{
+  background: navy; /* background color of toggler icon when activated */
+}
+
+div.slideouticons input:checked ~ div.iconswrapper{ /* flip icons wrapper to reveal icons when activated */
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+div.slideouticons input:checked ~ div.iconswrapper ul li{ /* rotate and shift icons into view when activated */
+  opacity: 1;
+  -webkit-transform: translateY(0) rotate(360deg);
+  transform: translateY(0) rotate(360deg);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+div.slideouticons input:checked ~ div.iconswrapper ul li:nth-of-type(1){
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+  z-index: 4;
+}
+
+div.slideouticons input:checked ~ div.iconswrapper ul li:nth-of-type(2){
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s; /* increment delay by 0.3s for each icon */
+  z-index: 3; /* decrement z-index by 1 for each icon */
+}
+
+div.slideouticons input:checked ~ div.iconswrapper ul li:nth-of-type(3){
+  -webkit-transition-delay: .6s;
+  transition-delay: .6s;
+  z-index: 2;
+}
+
+div.slideouticons input:checked ~ div.iconswrapper ul li:nth-of-type(4){
+  -webkit-transition-delay: .9s;
+  transition-delay: .9s;
+  z-index: 1;
+}
+
+
+/* ########## Horizontal Version CSS ########## */
+
+div.slideouticons.horizontal div.iconswrapper{
+  top: 15px;
+  left: 60px; /* horizontal offset of icons wrapper from the left of main container */
+}
+
+
+div.slideouticons.horizontal div.iconswrapper ul li{
+  display: inline;
+  float: left;
+  margin-bottom: 0;
+  margin-top: 10px;
+  margin-right: 10px;
+  -webkit-transform: translateX(-100%) rotate(0);
+  transform: translateX(-100%) rotate(0);
+}
+
+
+div.slideouticons.horizontal input:checked ~ div.iconswrapper ul li{
+  -webkit-transform: translateX(0) rotate(360deg);
+  transform: translateX(0) rotate(360deg);
+}
+
+</style>
+
+ [if lte IE 9]>
+<style>
+
+ div.slideouticons div.iconswrapper{
+   visibility: hidden;
+ }
+div.slideouticons input:checked ~ div.iconswrapper{
+  visibility: visible;
+}
+
+</style>
+
+  <![endif]
+
+ [if lte IE 8]>
+<style>
+
+ div.slideouticons{
+   display: none;
+ }
+
+</style>
+  <![endif]
+
+
+ 
+/* misc */
+.app-login-form {
+  max-width: 280px;
+  margin-top: -60px;
+}
+.app-new-msg {
+  margin-right: 10px;
+}
+.app-brand {
+  width: 40%;
+  display: inline-block;
+}
+.app-brand img {
+  width: 100%;
+}
+.img {
+}
+.font {
+}
+ 
+a.nav-link {
+  background-color:transparent;
+}
+<!--  BEGINNING MENUU -->
+
+.multi_drop_menu {
+
+font:1em tahoma, geneva, sans-serif;
+
+}
+
+.multi_drop_menu a {
+
+display:block;
+
+color:blue;
+
+background-color:transparent;
+
+padding:.3em 1em;
+
+
+
+border-width:4px;
+
+border-color:transparent;
+
+}
+
+.multi_drop_menu a:hover {
+
+color:#fff;
+
+background-color:#3097D1;
+
+}
+
+.multi_drop_menu a:active {
+
+background:purple;
+
+color:#ccc;
+
+}
+
+.multi_drop_menu * {margin:0; padding:0;}
+
+.multi_drop_menu ul {float:left;width:100%;}
+
+.multi_drop_menu ul li {
+
+	z-index:99;
+
+	  width:25%;
+
+float:left;
+
+list-style-type:none;
+
+position:relative;
+
+ 
+
+}
+
+
+
+.multi_drop_menu li {
+
+     
+
+float:left;
+
+list-style-type:none;
+
+position:relative;
+
+}
+
+.multi_drop_menu li a {
+text-align:center;
+display:block;
+
+	 
+border-right-style:none;
+
+background-clip:padding-box;
+
+
+text-decoration:none;
+
+}
+
+.multi_drop_menu li:last-child a {
+
+border-right-style:none;}
+
+.multi_drop_menu li ul {display:none;}
+
+
+
+/*visual */
+
+.multi_drop_menu li ul { 
+
+ 
+
+ 
+
+}
+
+@media (min-width: 401px) {
+ .multi_drop_menu li li a {  
+    color:silver; 
+background-color:orange;
+  }
+}
+
+.multi_drop_menu li li   { 
+  color:white; 
+} 
+.multi_drop_menu li li a { 
+  color:white;
+background-color:#3097D1;
+border-right-style: none;
+text-align:left;
+border-top-style:solid;
+border-top-color:transparent;
+
+} 
+/*functional addition */
+
+.multi_drop_menu li ul {
+
+display:block;
+
+position:absolute;
+
+left:0;
+
+top:100%;
+
+}
+
+.multi_drop_menu li li {
+float:none;
+background-color: #aaa;
+width:150px;
+
+}
+
+.multi_drop_menu li li ul {
+
+display:none; 
+}
+
+
+
+/*      */
+
+.multi_drop_menu li ul {
+
+display:none;
+
+position:absolute;
+ 
+
+}
+
+.multi_drop_menu li:hover > ul {
+
+display:block;
+
+}
+
+li ul {
+
+display:none;
+
+}
+
+li:hover > ul {
+
+display:block;
+
+}
+
+.multi_drop_menu li li ul {
+
+position:absolute;
+
+left:100%;
+
+top:0;
+ 
+} 
+ 
+.multi_drop_menu li:hover > a {
+
+color:#fff;
+
+background-color:#004ea5;
+
+}
+ 
+
+
+.multi_drop_menu ul li ul li a {
+background-color:#004ea5;
+ 
+    width:150px;
+    
+
+}
+
+
+
+.blog { 
+    float:left;  
+min-height:500px;
+max-height:500px; 
+	width:100%;
+	border:inset 2px silver;  
+background-color:white;
+padding:0px;
+margin:0px;
+} 
+.blog h2 {
+text-shadow: 3px 3px 3px #aaa;
+font-size:1em;
+border:solid .5px brown;
+padding:3px 4px 3px 4px;
+margin-bottom:5px;
+color:#59f3ff; 
+} 
+.blog h3 { 
+color:#59f3ff; 
+text-shadow: 3px 3px 3px #aaa;
+}
+.blog p {   
+line-height:1.2em;
+} 
+.center {
+text-align:center;
+}
+.rightalign {
+text-align:right;
+color:#59f3ff; 
+margin-right:0px;
+margin-bottom:5px;
+}
+.twitter-follow-button {
+ } 
+#immigration  { 
+margin-left:auto;
+margin-right:auto;
+border:2px outset silver; 
+overflow-y:scroll; 
+padding:5px;
+margin:0px; 
+min-height:500px;
+max-height:500px; 
+float:left; 
+color:white;
+min-width:
+max-width:400px;
+} 
+#immigration h2 {
+text-align:center;
+}
+
+#health  {
+float:left;
+margin-left:auto;
+margin-right:auto;
+border:2px outset silver; 
+overflow-y:scroll; 
+padding:5px;
+margin:0px; 
+min-height:500px;
+max-height:500px; 
+float:left; 
+color:white;
+max-width:400px;
+
+}
+#health h2 {
+text-align:center;
+} 
+.innerAcc {
+max-height:215px;
+padding:0px;
+margin:0px; 
+}
+.innerSci {
+max-height:215px;
+padding:0px;
+margin:0px;
+} 
+#textPhilosophy { 
+}
+.research  {  
+ 
+margin-left:auto;
+margin-right:auto;
+border:3px outset #004ea5; 
+overflow-y:hidden;
+overflow-x:scroll; 
+font-size:1.2em;
+min-height:500px;
+float:left; 
+color:brown;
+}
+/* ****************************************************  slideouticon ***************/
+
+/* Dynamic Drive Socia Media */
+
+div.slideouticons{ /* main container for slide out icons */ 
+	position: relative; /* change position to fixed or absolute if desired */
+	-webkit-perspective: 1000px;
+	perspective: 1000px;
+	z-index: 1000;
+
+}
+
+div.slideouticons input{
+	display: none;
+}
+
+div.slideouticons label.mainlabel{ /* menu anchor icon style */
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	cursor: pointer;
+	font-size: 24px; /* font size, pertains to icon fonts specifically */
+	width: 50px; /* width of anchor icon */
+	height: 50px; /* height of anchor icon */
+	text-align: center;
+	color: white;
+	background: #80C5EC;
+	border-radius: 50%;
+	outline: none;
+	z-index: 100000;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+
+div.slideouticons div.iconswrapper{ /* DIV that flips over to reveal the hidden icons */
+	position: absolute;
+	margin: 0;
+	top: 60px; /* vertical offset of icons wrapper from the top of main container */
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition-delay: 0.5s;
+	transition-delay: 0.5s;
+}
+
+
+div.slideouticons div.iconswrapper ul{
+	position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	z-index: -1;
+}
+
+div.slideouticons div.iconswrapper ul li{
+	margin-bottom: 10px;
+	position: relative;
+	opacity: 0;
+	width: 50px; /* width of social icons */
+	height: 50px; /* height of social icons */
+	-webkit-transform: translateY(-100%) rotate(0);
+	transform: translateY(-100%) rotate(0);
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+
+div.slideouticons div.iconswrapper ul li a{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	font-size: 24px; /* font size, pertains to icon fonts specifically */
+	width: 100%;
+	height: 100%;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	text-align: center;
+	background: #80C5EC; /* background color of icons */
+	text-decoration: none;
+	border-radius: 50%;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+
+div.slideouticons div.iconswrapper ul li a:hover{
+	background: #515151; /* background color of icons on hover */
+	color: white;
+}
+
+div.slideouticons input:checked ~ label.mainlabel{
+	background: navy; /* background color of toggler icon when activated */
+}
+
+div.slideouticons input:checked ~ div.iconswrapper{ /* flip icons wrapper to reveal icons when activated */
+	-webkit-transform: rotateY(0);
+	transform: rotateY(0);
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+div.slideouticons input:checked ~ div.iconswrapper ul li{ /* rotate and shift icons into view when activated */
+	opacity: 1;
+	-webkit-transform: translateY(0) rotate(360deg);
+	transform: translateY(0) rotate(360deg);
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+div.slideouticons input:checked ~ div.iconswrapper ul li:nth-of-type(1){
+	-webkit-transition-delay: 0;
+	transition-delay: 0;
+	z-index: 4;
+}
+
+div.slideouticons input:checked ~ div.iconswrapper ul li:nth-of-type(2){
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s; /* increment delay by 0.3s for each icon */
+	z-index: 3; /* decrement z-index by 1 for each icon */
+}
+
+div.slideouticons input:checked ~ div.iconswrapper ul li:nth-of-type(3){
+	-webkit-transition-delay: .6s;
+	transition-delay: .6s;
+	z-index: 2;
+}
+
+div.slideouticons input:checked ~ div.iconswrapper ul li:nth-of-type(4){
+	-webkit-transition-delay: .9s;
+	transition-delay: .9s;
+	z-index: 1;
+}
+
+
+/* ########## Horizontal Version CSS ########## */
+
+div.slideouticons.horizontal div.iconswrapper{
+	top: 0;
+	left: 60px; /* horizontal offset of icons wrapper from the left of main container */
+}
+
+
+div.slideouticons.horizontal div.iconswrapper ul li{
+	display: inline;
+	float: left;
+	margin-bottom: 0;
+	margin-right: 10px;
+	-webkit-transform: translateX(-100%) rotate(0);
+	transform: translateX(-100%) rotate(0);
+}
+
+
+div.slideouticons.horizontal input:checked ~ div.iconswrapper ul li{
+	-webkit-transform: translateX(0) rotate(360deg);
+	transform: translateX(0) rotate(360deg);
+}
+
+</style>
+
+<!--[if lte IE 9]>
+	<style>
+	
+		div.slideouticons div.iconswrapper{
+			visibility: hidden;
+		}
+		div.slideouticons input:checked ~ div.iconswrapper{
+			visibility: visible;
+		}
+	
+	</style>
+
+<![endif]-->
+
+<!--[if lte IE 8]>
+	<style>
+	
+		div.slideouticons{
+			display: none;
+		}
+
+	</style>
+
+
+<![endif]-->
+
+<!--  BEGINNING MENUU -->
+
+.multi_drop_menu {
+
+font:1em tahoma, geneva, sans-serif;
+
+}
+
+.multi_drop_menu a {
+
+display:block;
+
+
+
+color:blue;
+
+background-color:#9ac9e7;
+
+padding:.3em 1em;
+
+
+
+border-width:4px;
+
+border-color:transparent;
+
+}
+
+.multi_drop_menu a:hover {
+
+color:#fff;
+
+background-color:yellow;
+
+}
+
+.multi_drop_menu a:active {
+
+background:purple;
+
+color:#ccc;
+
+}
+
+.multi_drop_menu * {margin:0; padding:0;}
+
+.multi_drop_menu ul {float:left;width:100%;}
+
+.multi_drop_menu ul li {
+
+	z-index:99;
+
+	  width:25%;
+
+float:left;
+
+list-style-type:none;
+
+position:relative;
+
+ 
+
+}
+
+
+
+.multi_drop_menu li {
+
+     
+
+float:left;
+
+list-style-type:none;
+
+position:relative;
+
+}
+
+.multi_drop_menu li a {
+text-align:center;
+display:block;
+
+	 
+border-right-style:none;
+
+background-clip:padding-box;
+
+
+text-decoration:none;
+
+}
+
+.multi_drop_menu li:last-child a {
+
+border-right-style:none;}
+
+.multi_drop_menu li ul {display:none;}
+
+
+
+/*visual */
+
+.multi_drop_menu li ul { 
+
+ 
+
+
+background-color:transparent;
+
+}
+
+.multi_drop_menu li li a {
+
+border-right-style: none;
+text-align:left;
+border-top-style:solid;
+border-top-color:transparent;
+
+}
+
+/*functional addition */
+
+.multi_drop_menu li ul {
+
+display:block;
+
+position:absolute;
+
+left:0;
+
+top:100%;
+
+}
+
+.multi_drop_menu li li {
+
+float:none;
+
+width:50px;
+
+}
+
+.multi_drop_menu li li ul {
+
+display:none;
+
+}
+
+
+
+/*      */
+
+.multi_drop_menu li ul {
+
+display:none;
+
+position:absolute;
+
+left:0;
+
+top:100%;
+
+}
+
+.multi_drop_menu li:hover > ul {
+
+display:block;
+
+}
+
+li ul {
+
+display:none;
+
+}
+
+li:hover > ul {
+
+display:block;
+
+}
+
+.multi_drop_menu li li ul {
+
+position:absolute;
+
+left:100%;
+
+top:0;
+
+}
+
+.multi_drop_menu li:hover > a {
+
+color:#fff;
+
+background-color:blue;
+
+}
+
+
+
+.multi_drop_menu ul li ul li a {
+
+    width:180px;
+
+}
+
+ 
