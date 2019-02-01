@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024">
+    <meta name="description" content="Thomas Maestas provides data analysis and visualization, sociology and criminology statistical tests">
+    <meta name="keywords" content="Thomas Maestas, Thomas M Maestas, data analysis and visualization, sociology statistical tests">
+    <meta name="author" content="Thomas Maestas">
+
+    <title>&nbsp;&nbsp;T&nbsp;&nbsp; M&nbsp;&nbsp; M</title>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'dist/js/analytics.js', 'ga');
+        ga('create', 'UA-71584977-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
+  <script src="bower_components/d3/d3.js"></script>
+  <script src="gulp/tether-1.3.3/src/js/tether.js"></script>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/tether/dist/js/tether.js"></script>
+    <script type="text/javascript">
+  /*      function draw(geo_data) {
+            "use strict";
+            var margin = 5,
+                width = 600 - margin,
+                height = 400 - margin;
+            d3.select(".map")
+                .attr('text-align', 'center')
+                .attr('margin', '0px');
+            d3.select("body").transition()
+                .duration(4000)
+                .delay(500)
+                .style("background-color", "#00d9f9");
+
+            var svg = d3.select(".map")
+                .append("svg")
+                .attr("width", width + margin)
+                .attr("height", height + margin)
+                .append('g')
+                .attr('class', 'map');
+
+            var projection = d3.geo.mercator()
+                .scale(100)
+                .translate([width / 2, height / 1.5]);
+
+            var path = d3.geo.path().projection(projection);
+            var map = svg.selectAll('path')
+                .data(geo_data.features)
+                .enter()
+                .append('path')
+                .attr('d', path)
+                .style('fill', 'rgb(0, 176, 236)')
+                .style('stroke', 'white')
+                .style('stroke-width', 0.5);
+        };
+
+        d3.json("data/world_countries.json", draw);
+        */
+    </script>  <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- <script src="../../bower_components/foundation/js/foundation.js"></script>
+   <script src="../../bower_components/modernizr/modernizr.js"></script>
+  -->
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
+  <script src="../../bower_components/d3/d3.min.js"></script>
+  <script src="../../gulp/tether-1.3.3/src/js/tether.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/tether/dist/js/tether.js"></script>
+  <script src="dist/js/toolkit.min.js"></script>
+  <script src="dist/js/application.min.js"></script>
+
+  <style type="text/css">
+    body {
+opacity:.9;
+      background-image:url("src/img/bluechipTile.jpg");
+    }
+    .map {
+      text-align:center;
+      background-color:lightsteelblue;
+      color:rgb(9,157,217);
+      padding:0px;
+      text-shadow: 10px 10px 5px #888888;
+      fill:blue;
+      stroke:white;
+      stroke-width:.5;
+      z-index:4;
+        }
+    .map.card-header {
+      margin:0px;
+      padding:0px;
+      z-index:4;
+    }
+    .card-block.text-center {
+       z-index: 9;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      text-align:center;
+      color:darkblue;
+    }
+    svg {
+      opacity:.7;
+      z-index:4;
+    }
+    div.card.visible-md-block {
+      z-index:33
+    }
+    .card-profile-img {
+      z-index:1;
+    }
+    .selected {
+      fill:yellow;
+    }
+  </style>
+  <script type="text/javascript">
+    function draw(geo_data) {
+      "use strict";
+
+      var margin = 175,
+        width = 1920 - margin,
+        height = 1080 - margin;
+
+      var svg = d3.select(".map")
+        .append("svg")
+        .attr("width", width + margin)
+        .attr("height", height + margin)
+        .append('g')
+        .attr('class', 'map');
+
+      var projection = d3.geo.mercator()
+        .scale(200)
+        .translate([width / 2.7, height / 1.9]);
+
+      var path = d3.geo.path().projection(projection);
+
+      var map = svg.selectAll('path')
+        .data(geo_data.features)
+        .enter()
+        .append('path')
+        .attr('d', path)
+        .style('fill', 'rgb(9,157,217)')
+        .style('stroke-width', 0.3);
+    };
+
+  </script>
+
+
+<script type="text/javascript">
+  var inputString = "";
+
+  function updateString(value) {
+    inputString += value;
+    document.forms[1].input.value = inputString;
+  }
+</script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="dist/scss/bootstrap.css" rel="stylesheet">
+<link href="css/toolkit.css" rel="stylesheet">
+<link href="css/application.css" rel="stylesheet">
+
+</head>
+<body class="with-top-navbar">
+    <!--
+    /* Add the Countries */
+    svg.selectAll(".country")
+      .data(countries)
+      .enter().append("path")
+      .attr("class", "country")
+      .attr("d", path)
+      .on('mouseover', function(d) {
+        d3.select(this).classed("selected", true)
+      })
+      .on('mouseout', function(d) {
+        d3.select(this).classed("selected", false)
+      });
+ /* Add the Cities */
+
+    svg.selectAll(".city-circle")
+      .data(capitals)
+      .enter().append("circle")
+      .attr("r", 2)
+      .attr("cx", function(d) {
+        var coords = projection([d.long, d.lat])
+
+        return 10;
+      })
+      .attr("cy", function(d) {
+        return 10;
+      })
+
+      }
+-->
+
+  </script>
+  <script type="text/javascript">
+    d3.json("data/world_countries.json", draw);
+  </script>
+  <script type="text/javascript">
+        var inputString = "";
+
+        function updateString(value) {
+            inputString += value;
+            document.forms[1].input.value = inputString;
+        }
+    </script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="dist/scss/bootstrap.css" rel="stylesheet">
+    <link href="css/toolkit.css" rel="stylesheet">
+    <link href="css/application.css" rel="stylesheet">
+
+
+    <style>
+        /*
+form {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  padding:10px;
+  margin:10px;
+    color:blue;text-decoration:none;
+    background-color: #dfeef7;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+}
+form:hover {
+	font-weight: 500;
+    border:solid 1px silver;
+    transition: margin 0.3s; 	}
+
+path {
+  fill-rule: evenodd;
+  stroke: #333;
+  stroke-width: 2px;
+}
+.sun path {
+  fill: #6baed6;
+}
+.planet path {
+  fill: #9ecae1;
+}
+.annulus path {
+  fill: #c6dbef;
+}
+
+
+        #d3_v4 {
+            background-color: gray;
+            width: 800px;
+        }
+
+        #d3_v4 {
+            background-color: white;
+            width: 500px;
+        }
+  */
+    </style>
+
+
+
+
+
+    <div id="divContainer">
+        <h2 id="title2"></h2>
+        <div class="growl" id="app-growl"></div>
+        <nav class="navbar navbar-toggleable-sm fixed-top navbar-inverse bg-primary app-navbar">
+            <button class="navbar-toggler navbar-toggler-right hidden-md-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+            <a class="navbar-brand" href="index.html">
+                <img src="src/img/TMMblueTrans.png" alt="" width="100" class="tmm" />
+            </a>
+
+            <div class="collapse navbar-collapse multi_drop_menu main" id="navbarResponsive">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link">Portfolio</a>
+                        <ul>
+
+
+                            <li class="nav-item active">
+                                <a class="nav-link"> &nbsp;Conference<br />Presentations</a>
+                                <ul>
+                                    <li><a href="http://tinyurl.com/gmtj4v4" target="_blank" style="width:350px;"><span>
+"Great Expectations Deferred: Contextualizing Community College Transfer Intentions"<br /> </span>2016 ASA-American Sociological Conference<br />@Seattle, WA</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://hscmediasite.unm.edu/unm/Catalog/Full/6a7e058c7810440197da72484269d86c21/?state=JPIHdhLtVxTxyQQ2QHuG" target="_blank" style="width:350px;"><span> "Social Determinants of Healthy Aging"<br />
+ </span>Dec 2015 UNM Health Sciences Institute for Ethics Colloquium<br />@Albuquerque, NM</a>
+                                    </li>
+                                    <li><a href="http://tinyurl.com/pcq6mjx" target="_blank" style="width:350px;"><span> "The Effects of Peer Association on Adolescents' Graduation Outcomes: An HLM Approach" <br /> </span>2015 ASA Conference<br />@Chicago, Illinois</a>
+                                    </li>
+                                    <li><a href="http://www.cpc.unc.edu/projects/addhealth/events/20140613AddHealthUsersConferenceAbstracts.pdf" target="_blank" style="width:350px;"><span>
+ "Great Expectations: A Study on the Determinants of College Graduation Expectations"<br />
+ 2014 NIH-UNC Adolescent Health Data Users Conference, Session 6<br /> @Bethesda, Maryland
+ </span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="profile/tmaestas_resume.html" target="_blank">CV-english</a></li>
+                            <li><a href="docs/docu/MaestasThomas_CV2017_fr.pdf" target="_blank">CV-français</a></li>
+                            <li><a href="http://hdl.handle.net/1928/31677" target="_blank">Education Thesis</a></li>
+                            <li><a href="docs/docu/DataPresentADD_health_networks.pdf">Education Data Analysis R-LaTeX</a></li>
+                            <li><a href="docs/docu/ADAHighSchoolNetworks.html">Education Data Analysis R-3.4</a></li>
+                            <li><a href="docs/poli/edregression.htm">Education Data Analysis SPSS-25</a></li>
+                            <li><a href="https://public.tableau.com/profile/thomas.milton.maestas#!/vizhome/CarbonFootprint_1/C02NationTime" target="_blank">Environment Data Analysis Tableau</a></li>
+                            <li><a href="docs/d3/globe_update.html">Example of Data Visualization D3.js</a></li>
+                            <li><a href="tmTypescript" class="typescript_architecture">Javascript supersetting Example
+							Typescript </a></li>
+                            <li><a href="/docs/coffeescript/coffeescript.html">CoffeeScript supersetting</a></li>
+
+                            <li><a href="juillet/views" class="nodejs_express_angular4_nodejs">Example of MongoDB database using Express Stack: "TMjuillet"</a></li>
+                            <li><a href="juillet/views" class="nodejs_express_angular4_nodejs">Example of Angular-4 model-view-controller using node.js server: "TMangular-4"</a></li>
+                        </ul>
+                    </li>
+
+
+
+
+
+
+                    <li class="nav-item active">
+                        <a class="nav-link"><span class="caret">tmmFICTION &nbsp;&nbsp;</span> <br /></a>
+
+
+                        <ul>
+                          <li style="z-index:100;">< class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Web &nbsp;&nbsp;</li></a>
+                                <ul>
+                                    <li style="z-index:100;width:60px;"><a href="/_For_Cat_Eyes_Only_/index.html">For Cat Eyes Only: <i>Early Months of Win's Campaign</i></a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+
+                    <li class="nav-item active" style="z-index:1;"><a class="nav-link"><span class="caret">tmmPLAYR</span> <br /></a>
+                        <ul>
+                            <li><a href="/app/js/codePlayer.html" target="_blank">Code Player</a></li>
+                            <li><a href="/app/js/dice/index.html" target="_blank">No Dice !</a> </li>
+
+                        </ul>
+                    </li>
+
+
+
+
+
+
+                    <li class="nav-item active"><a class="nav-link">API + JS</a>
+                        <ul>
+                            <li style="z-index:1;"><a href="docs/php/weatherAPI.php">Weather-Map API</a></li>
+                            <li><a href="docs/d3/planet.html">Planets</a></li>
+                            <li><a href="docs/d3/mobilesuits.html">Mobile Law Suits</a></li>
+                            <li style="z-index:2"><a href="docs/d3/color.html">Colors</a></li>
+                            <li style="z-index:2"><a href="docs/d3/flow.html">Flow</a></li>
+                            <li style="z-index:2"><a href="docs/d3/dendrogram.html">Dendrogram</a></li>
+                            <li style="z-index:2"><a href="docs/d3/alphabet.html">Alphabet Graph</a></li>
+                            <li style="z-index:2"><a href="docs/d3/globe_update.html">World Cup Map</a></li>
+
+
+
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item active"><a class="nav-link"><span class="caret">Coding &nbsp;&nbsp;</span> <br /></a>
+
+
+                        <ul>
+                            <li style="z-index:100;"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Web </a></li>
+                                <ul>
+                                    <li style="z-index:100;"><a href="http://webreference.com/" target="_blank">Web Reference</a></li>
+                                    <li><a href="https://developer.mozilla.org" target="_blank">Mozilla Dev</a></li>
+                                    <li><a href="http://support.google.com/webmasters/?hl=en" target="_blank">Google Dev</a></li>
+                                    <li><a href="http://developer.yahoo.com/" target="_blank">Yahoo! Dev</a></li>
+                                    <li><a href="http://www.w3schools.com" target="_blank">W3 schools</a></li>
+                                    <li><a href="http://www.w3.org/" target="_blank">World Wide Web Consortium</a></li>
+                                    <li><a href="https://www.icann.org" target="_blank">ICANN</a></li>
+                                </ul>
+                            </li>
+                            <li style="z-index:98.2;"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> D3 tools &nbsp;&nbsp;<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li style="z-index:98"><a href="http://d3js.org" target="_blank">D3js</a></li>
+                                    <li style="z-index:98.5"><a href="https://github.com/d3/d3-3.x-api-reference/blob/master/API-Reference.md">d3.v3</a></li>
+                                    <li style="z-index:98.5"><a href="https://chartio.com/" target="_blank">chartio</a></li>
+                                    <li style="z-index:98.5"><a href="http://code.shutterstock.com/rickshaw/" target="_blank">rickshaw</a></li>
+                                    <li style="z-index:98.5"><a href="http://rawgraphs.io/" target="_blank">rawgraphs.io </a></li>
+                                    <li style="z-index:98.5"><a href="http://dimplejs.org" target="_blank">dimplejs</a></li>
+                                    <li style="z-index:98.5"><a href="http://nvd3.org/" target="_blank">nvd3</a></li>
+                                    <li style="z-index:98.5"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG" target="_blank">SVG</a></li>
+                                    <li style="z-index:98.5"><a href="https://www.khronos.org/webgl/" target="_blank">WebGL</a></li>
+                                    <li style="z-index:98.5"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API" target="_blank">Canvas</a></li>
+                                    <li style="z-index:98.5"><a href="http://alignedleft.com/tutorials/d3/binding-data" target="_blank">binding-data</a></li>
+                                    <li style="z-index:98.5"><a href="http://datajournalismhandbook.org/1.0/en/getting_data_3.html" target="_blank">getting_data</a></li>
+                                    <li style="z-index:98.5"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API" target="_blank">Canvas</a></li>
+                                    <li style="z-index:98.5"><a href="https://github.com/d3/d3/blob/master/CHANGES.md" target="_blank">d3.v4 changes</a></li>
+                                    <li style="z-index:98"><a href="https://github.com/d3/d3/blob/master/API.md" target="_blank">D3js APIs</a></li>
+                                </ul>
+                            </li>
+
+                            <li style="z-index:98;"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Javascript &nbsp;&nbsp;<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li style="z-index:98"><a href="http://jqueryui.com" target="_blank">jQueryUI</a></li>
+                                    <li style="z-index:98"><a href=" http://jquery.com/" target="_blank">jQuery</a></li>
+                                    <li style="z-index:98"><a href="https://jsbin.com" target="_blank">JS Bin</a></li>
+                                    <li style="z-index:98"><a href="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank">JavaScript APIs</a></li>
+                                </ul>
+                            </li>
+
+                            <li style="z-index:10 ;"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Datasets &nbsp;&nbsp;</a> <span class="caret"></span>
+                                <ul>
+                                    <li style="z-index:10 ;"><a href="http://www.icpsr.umich.edu/icpsrweb/ICPSR/index.jsp" target="_blank">ICPSR Datasets</a></li>
+                                    <li style="z-index:10 ;"><a href="http://data.imf.org/?sk=7CB6619C-CF87-48DC-9443-2973E161ABEB" target="_blank">Datasets IMF</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li style="z-index:9;"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Validators &nbsp;&nbsp;</a>
+                                <ul>
+                                    <li style="z-index:9;"><a href="https://stats.idre.ucla.edu/other/dae/" target="_blank">Validators </a><span class="caret"></span></li>
+                                    <li><a href="http://validator.w3.org" target="_blank">HTML validator</a></li>
+                                    <li><a href="http://jigsaw.w3.org/css-validator/" target="_blank">CSS validator</a></li>
+                                    <li><a href="http://jsonlint.com/" target="_blank">JSON Validator</a></li>
+                                </ul>
+                            </li>
+
+                            <li style="z-index:1;"><a href="http://html-color-codes.info/" target="_blank">Color Codes</a></li>
+                            <li style="z-index:1;"><a href="https://inkscape.org/en/" target="_blank">Inkscape</a></li>
+                            <li style="z-index:1;"> <a href="https://v4-alpha.getbootstrap.com" target="_blank">Bootstrap</a></li>
+                            <li style="z-index:1;"><a href="http://www.dynamicdrive.com/" target="_blank">Dynamic Drive</a></li>
+                            <li style="z-index:1;"><a href="http://php.net" target="_blank">PHP.net</a></li>
+                            <li><a href="http://www.useit.com/" target="_blank">Jakob Nielson</a></li>
+                            <li><a href="http://www.alistapart.com/" target="_blank">A List Apart</a></li>
+                            <li><a href="http://codepen.io/" target="_blank">codepen.io</a></li>
+                            <li><a href="http://www.sitepoint.com/" target="_blank">sitepoint</a></li>
+                            <li><a href="http://www.kaggle.com" target="_blank">Kaggle</a></li>
+                            <li><a href="http://plnkr.co/" target="_blank">Plunker</a></li>
+                            <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                            <li><a href="https://gist.github.com/" target="_blank">Gist<small>GitHub</small></a></li>
+                            <li><a href="http://stackoverflow.com" class="last" target="_blank">Stack Overflow</a></li>
+                            <li><a href="https://www.virtualbox.org/" target="_blank">Virtual Box</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item active"><a class="nav-link"><span class="caret">Tools</span><br /> </a>
+                        <ul>
+
+                            <li style="z-index:101;"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Stats &nbsp;&nbsp;</a> <span class="caret"></span>
+                                <ul>
+                                    <li style="z-index:101;"><a href="https://stats.idre.ucla.edu/other/dae/" target="_blank">Stats</a></li>
+                                    <li style="z-index:101;"><a href="http://openrefine.org/" target="_blank">OpenRefine</a></li>
+                                    <li style="z-index:102;"><a href="http://statacumen.com" target="_blank">Stat Acumen</a></li>
+                                    <li style="z-index:102;"><a href="http://www.mapageweb.umontreal.ca/durandc/" target="_blank">Montreal Stats</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li style="z-index:12;"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SQL &nbsp;&nbsp; </a> <span class="caret"></span>
+                                <ul>
+                                    <li style="z-index:12;"><a target="_blank">MySQL &nbsp;&nbsp;</a></li>
+                                    <li style="z-index:12;"><a href="https://www.mysql.com/" target="_blank">MySQL</a></li>
+                                    <li style="z-index:121;"><a href="http://www.oracle.com/technetwork/developer-tools/apex/overview/index-155186.html" target="_blank">Oracle Express</a></li>
+                                    <li style="z-index:121;"><a href="http://iacademy.oracle.com" target="_blank">Application Express</a></li>
+                                </ul>
+                            </li>
+
+                            <li style="z-index:1;"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> R-Project &nbsp;&nbsp; </a> <span class="caret"></span>
+                                <ul>
+                                    <li style="z-index:1;"><a href="https://www.r-project.org/" target="_blank">R-Project </a>
+                                        <li><a href="https://www.rstudio.com/" target="_blank">RStudio</a></li>
+                                        <li><a href="https://shiny.rstudio.com/" target="_blank">Shiny</a></li>
+                                        <li><a href="http://amsantac.co/blog/en/2015/10/31/qgis-r.html" target="_blank">Open GIS</a></li>
+                                        <li><a href="http://www.tableau.com/products/cloud-bi" target="_blank">Tableau </a></li>
+                                </ul>
+                                </li>
+                                <li style="z-index:1;"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Python &nbsp;&nbsp; </a> <span class="caret"></span>
+                                    <ul>
+                                        <li style="z-index:1;"><a href="https://www.python.org/" target="_blank">Python.org</a>
+                                            <li><a href="https://pypi.python.org/pypi" target="_blank">Python Package Index</a></li>
+                                            <li><a href="https://docs.python.org/2/library/index.html" target="_blank">Python Standard Library</a></li>
+                                            <li><a href="https://pandas.pydata.org/pandas-docs/stable/" target="_blank">Pandas Data Analysis Toolkit</a></li>
+
+                                    </ul>
+                                    </li>
+                        </ul>
+                        </li>
+                </ul>
+            </div>
+            <form class="form-inline float-right hidden-sm-down">
+                <!--
+ <input class="form-control" type="text" id="search" data-action="grow" placeholder="Search">-->
+            </form>
+
+            <div class="slideouticons horizontal slideout">
+                <input type="checkbox" id="togglebox" />
+                <label for="togglebox" class="mainlabel fa fa-share-alt"></label>
+
+                <div class="iconswrapper">
+                    <ul>
+                        <li>
+                            <a href="https://twitter.com/ThomasMaestas" target="_blank" class="fa fa-twitter" title="Twitter"></a>
+                        </li>
+                        <li>
+                            <a href="https://facebook.com/thomas.maestas.16" target="_blank" class="fa fa-facebook" title="Facebook"></a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/+thomasmaestas2017" target="_blank" class="fa fa-google-plus" title="Google Plus"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/thomasmaestas/" target="_blank" class="fa fa-instagram"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <li class="nav-item ml-2">
+
+                <button class="btn btn-default navbar-btn navbar-btn-avatar" data-toggle="popover">
+
+ <img class="rounded-circle profile"  src="src/img/thomas-maestas.jpg" alt="thomas maestas" />
+
+ </button>
+
+            </li>
+
+
+            <ul class="nav navbar-nav hidden-xs-up" id="js-popoverContent">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-action="growl"> </a>
+                </li>
+                <li class="nav-item title" id="title">
+                    <a class="nav-link" href="login/index.html"> </a>
+                </li>
+            </ul>
+
+        </nav>
+        <!--
+<div class="modal fade" id="msgModal" tabindex="-1" role="dialog" aria-labelledby="msgModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Action</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+
+      <div class="modal-body p-0 js-modalBody">
+        <div class="modal-body-scroller">
+          <div class="media-list media-list-users list-group js-msgGroup">
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="media">
+                <img class="rounded-circle media-object d-flex align-self-start mr-3" src="g">
+                <div class="media-body">
+                  <strong>Thomas Maestas</strong> and <strong>1 other</strong>
+                  <div class="media-body-secondary">
+                    &hellip;
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="media">
+                <img class="rounded-circle media-object d-flex align-self-start mr-3" src="">
+                <div class="media-body">
+                  <strong>Thoamas Maestas</strong> and <strong>3 others</strong>
+                  <div class="media-body-secondary">
+                    bicycle rights yeah…
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="media">
+                <img class="rounded-circle media-object d-flex align-self-start mr-3" src="">
+                <div class="media-body">
+                  <strong></strong>
+                  <div class="media-body-secondary">
+         bicycle rights yeah…
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="media">
+                <img class="rounded-circle media-object d-flex align-self-start mr-3" src="">
+                <div class="media-body">
+                  <strong></strong> and <strong>1 other</strong>
+                  <div class="media-body-secondary">
+                      &hellip;
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="media">
+                <img class="rounded-circle media-object d-flex align-self-start mr-3" src="">
+                <div class="media-body">
+                  <strong></strong> and <strong>3 </strong>
+                  <div class="media-body-secondary">
+                     bicycle rights
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="media">
+                <img class="rounded-circle media-object d-flex align-self-start mr-3" src="">
+                <div class="media-body">
+                  <strong></strong>
+                  <div class="media-body-secondary">
+                     bicycle rights
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="media">
+                <img class="rounded-circle media-object d-flex align-self-start mr-3" src="">
+                <div class="media-body">
+                  <strong></strong> and <strong>1 other</strong>
+                  <div class="media-body-secondary">
+                   &hellip;
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="media">
+                <img class="rounded-circle media-object d-flex align-self-start mr-3" src="">
+                <div class="media-body">
+                  <strong></strong> <strong></strong>
+                  <div class="media-body-secondary">
+
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="media">
+                <img class="rounded-circle media-object d-flex align-self-start mr-3" src="">
+                <div class="media-body">
+                  <strong>Thoamas Maestas</strong>
+                  <div class="media-body-secondary">
+                   sustainable  bicycle rights
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="hidden-xs-up m-3 js-conversation">
+            <ul class="media-list media-list-conversation">
+              <li class="media media-current-user mb-4">
+                <div class="media-body">
+                  <div class="media-body-text">
+                    Aenean
+                  </div>
+                  <div class="media-footer">
+                    <small class="text-muted">
+                      <a href="#">Thoamas Maestas </a> at 4:
+                    </small>
+                  </div>
+                </div>
+                <img class="rounded-circle media-object d-flex align-self-start mr-3" src="">
+              </li>
+
+              <li class="media mb-4">
+                <img class="rounded-circle media-object d-flex align-self-start mr-3" src="">
+                <div class="media-body">
+                  <div class="media-body-text">
+
+                  </div>
+                  <div class="media-body-text">
+
+                  </div>
+                  <div class="media-body-text">
+
+                  </div>
+                  <div class="media-footer">
+                    <small class="text-muted">
+                      <a href="#"></a>
+                    </small>
+                  </div>
+                </div>
+              </li>
+
+              <li class="media mb-4">
+                <img class="rounded-circle media-object d-flex align-self-start mr-3" src="">
+                <div class="media-body">
+                  <div class="media-body-text">
+
+                  </div>
+                  <div class="media-body-text">
+
+                  </div>
+                  <div class="media-footer">
+                    <small class="text-muted">
+                      <a href="#">Thoamas Maestas</a>
+                    </small>
+                  </div>
+                </div>
+              </li>
+
+              <li class="media media-current-user mb-4">
+                <div class="media-body">
+                  <div class="media-body-text">
+
+                  </div>
+                  <div class="media-footer">
+                    <small class="text-muted">
+                      <a href="#">Thoamas Maestas</a>
+                    </small>
+                  </div>
+                </div>
+                <img class="rounded-circle media-object d-flex align-self-start mr-3" src="">
+              </li>
+
+              <li class="media mb-4">
+                <img class="rounded-circle media-object d-flex align-self-start mr-3" src=" ">
+                <div class="media-body">
+                  <div class="media-body-text">
+
+                  </div>
+                  <div class="media-body-text">
+
+                  </div>
+                  <div class="media-body-text">
+
+                  </div>
+                  <div class="media-footer">
+                    <small class="text-muted">
+                      <a href="#"></a>
+                    </small>
+                  </div>
+                </div>
+              </li>
+
+              <li class="media mb-4">
+ <img class="rounded-circle media-object d-flex align-self-start mr-3" src=" ">
+           <div class="media-body">
+                  <div class="media-body-text">
+
+                  </div>
+                  <div class="media-body-text">
+
+                  </div>
+                  <div class="media-footer">
+                    <small class="text-muted">
+                      <a href="#">o</a>
+                    </small>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+        <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+
+<nav id="tmm">Bourdieu</nav>
+<nav id="breaking"></nav>
+<div class="tmm">Althusser</div><span id="mission">
+
+  core projects: TMangular4; TMjuillet:  Under Construction.
+  </span> </button>
+                    </div>
+
+                    <div class="modal-body p-0">
+                        <div class="modal-body-scroller">
+                            <ul class="media-list media-list-users list-group">
+                                <li class="list-group-item">
+                                    <div class="media w-100">
+                                        <img class="media-object d-flex align-self-start mr-3">
+                                        <div class="media-body">
+
+                                            <button class="btn btn-secondary btn-sm float-right">
+                    <span class="glyphicon glyphicon-user"></span>
+                  </button>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="media w-100">
+                                        <img class="media-object d-flex align-self-start mr-3">
+                                        <div class="media-body">
+                                            <button class="btn btn-secondary btn-sm float-right">
+                    <span class="glyphicon glyphicon-user"></span>
+                  </button>
+                                            <strong> </strong>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="media w-100">
+                                        <img class="media-object d-flex align-self-start mr-3">
+                                        <div class="media-body">
+                                            <button class="btn btn-secondary btn-sm float-right">
+                    <span class="glyphicon glyphicon-user"></span>
+                  </button>
+                                            <strong></strong>
+                                        </div>
+                                        <div class="multi_drop_menu">
+                                            <ul>
+                                                <li class="dropdown" style="z-index:1;"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret">CODE<br />PLAYER</span> <br /></a>
+                                                    <ul>
+                                                        <li><a href="/js/codePlayer.html" target="_blank">CodePlayer</a></li>
+                                                        <li><a href="/js/dice/index.html" target="_blank">Dice Game</a> </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown" style="z-index:1;">
+                                                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">API<span class="caret"></span><br /><br /></a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="/php/weatherAPI.php">Weather-Map API</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown" style="z-index:1;">
+                                                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">D3<span class="caret"></span><br /><br /></a>
+                                                    <ul>
+                                                        <li><a href="/d3/planet.html">Planets</a></li>
+                                                        <li><a href="/d3/mobilesuits.html">Mobile Law Suits</a></li>
+                                                        <li style="z-index:2"><a href="d3/color.html">Colors</a></li>
+                                                        <li style="z-index:2"><a href="d3/flow.html">Flow</a></li>
+                                                        <li style="z-index:2"><a href="d3/dendrogram.html">Dendrogram</a></li>
+                                                        <li style="z-index:2"><a href="d3/alphabet.html">Alphabet Graph</a></li>
+                                                        <li style="z-index:2"><a href="d3/globe_update.html">World Cup Map</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown" style="z-index:1;">
+                                                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VALIDATORS<span class="caret"></span> <br /><br />  </a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="http://validator.w3.org" target="_blank">HTML validator</a></li>
+                                                        <li><a href="http://jigsaw.w3.org/css-validator/" target="_blank">CSS validator</a></li>
+                                                        <li><a href="http://jsonlint.com/" target="_blank">JSON Validator</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- multi_drop_menu END -->
+                                    </div>
+                        </div>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container pt-4">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="card card-profile mb-4">
+                    <div class="map card-header"></div>
+
+                    <div class="card-block text-center">
+                        <a href="profile/index.html">
+                            <img class="card-profile-img" src="src/img/laTriomphe.jpg">
+                        </a>
+
+                        <h6 class="card-title">
+                            <a class="text-inherit" href="profile/index.html">Thomas M Maestas</a>
+                        </h6>
+
+                        <p class="mb-4">Welcome</p>
+
+                        <ul class="card-menu">
+                            <li class="card-menu-item">
+                                <a href="#userModal" class="text-inherit" data-toggle="modal">
+
+                                    <h6 class="my-0"> Data Analysis &nbsp; </h6>
+                                </a>
+                            </li>
+
+                            <li class="card-menu-item">
+                                <a href="#userModal" class="text-inherit" data-toggle="modal">
+
+                                    <h6 class="my-0">&nbsp; Web Development &nbsp; </h6>
+                                </a>
+                            </li>
+                            <li class="card-menu-item">
+                                <a href="#userModal" class="text-inherit" data-toggle="modal">
+
+                                    <h6 class="my-0">&nbsp; Sociology </h6>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card visible-md-block visible-lg-block mb-4">
+                    <div class="card-block" id="about">
+                        <h6 class="mb-3">About Me</h6>
+
+                        <ul class="list-unstyled list-spaced left">
+                            <li><span class="text-muted icon  mr-3"></span>Masters Sociology and Bachelors French History <a href="http://www.unm.edu" target="_blank"><span>University of New Mexico, Albuquerque</span></a>
+                                <hr>
+                                <li><span class="text-muted icon   mr-3"></span>Began PhD Sociology <a href="http://www.umontreal.ca"><span>l'Universite de Montreal, Quebec</span></a>
+                                    <hr>
+                                    <li><span class="text-muted icon   mr-3"></span> Provides Small Data Survey Analysis, with Big Data and Web solutions since 2016 </li>
+                                        <a href="http://www.tmaestas.net"> <span> T M Solutions</span></a>
+                                        <hr>
+                                        <li><span class="text-muted icon   mr-3"></span> Social Media
+                                            <span><a href="https://www.quora.com" target="_blank">Quora,</a><a href="https://www.historium.com" target="_blank"> Historium, </a><a href="https://www.instagram.com" target="_blank">Instagram, </a><a href="https://www.facebook.com" target="_blank">facebook, </a><a href="https://www.meetup.com" target="_blank">meet-up, </a> Hiking Group, and Alliance Francaise</span>
+                                            <li><span class="text-muted icon   mr-3"></span><span>Lives in
+<a href="http://cabq.gov" target="_blank">Albuquerque, New Mexico, USA</a></span>
+                                                <li><span class="text-muted icon   mr-3"></span><span>Lived in
+<a href="https://www.parisinfo.com/" target="_blank">Paris, France</a> and
+<a href="http://www.ny.gov/" target="_blank">New York</a> and <a href="https://www.visittheusa.com/state/texas" target="_blank">Texas.
+</a></span> <span id="samantha">Read More</span><span id="text">Hello, I'm Tom, and I'm an enthusiast of life! I love to travel, geographically as well as intellectually,
+    however I stay grounded as I'm a Perfectionist with data analysis, a Creative with data visualization, and I stretch both sides of the brain to make great projects come to life!
+     <br />Lately, I bind datasets to D3 algorithms to create innovative and personalized data analytics visualizations. <br />I love the web, and most of my output is hypertext but I have an academic side too. Visit me @ <a href="http://tmaestas.net">tmaestas.net</a> </span>
+
+                                                </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card visible-md-block visible-lg-block">
+                    <div class="card-block">
+                        <h6 class="mb-3">Photos</h6>
+                        <div data-grid="images" data-target-height="150">
+                            <div>
+                                <img data-width="640" data-height="640" style="min-width:640px;" data-action="zoom" src="src/img/MaestasReykjavikFull80.png">
+                            </div>
+
+                            <div>
+                                <img data-width="640" data-height="640" style="min-width:640px;" data-action="zoom" src="src/img/1907air40t.jpg">
+                            </div>
+<!--
+                            <div>
+                                <img data-width="640" data-height="640" data-action="zoom" src="src/img/Casper_and_Tiger.jpg">
+                            </div>
+
+                            <div>
+                                <img data-width="640" data-height="640" data-action="zoom" src="src/img/1907air.jpg">
+                            </div>
+
+                            <div>
+                                <img data-width="640" data-height="640" data-action="zoom" src="src/img/sunbeam.jpg">
+                            </div>
+-->
+
+
+
+                                        <input type="button" name="four" class="bu" value="4" onclick="updateString('4')" />&nbsp;&nbsp;
+                                        <input type="button" name="five" class="bu" value="5" onclick="updateString('5')" />&nbsp;&nbsp;
+                                        <input type="button" name="six" class="bu" value="6" onclick="updateString('6')" />&nbsp;&nbsp;
+                                        <input type="button" name="mult" class="bu" value="*" onclick="updateString('*')" /><br />
+                                        <input type="button" name="one" class="bu" value="1" onclick="updateString('1')" />&nbsp;&nbsp;
+                                        <input type="button" name="two" class="bu" value="2" onclick="updateString('2')" />&nbsp;&nbsp;
+                                        <input type="button" name="three" class="bu" value="3" onclick="updateString('3')" />&nbsp;&nbsp;
+                                        <input type="button" name="plus" class="bu" value="+" onclick="updateString('+')" /><br />
+                                        <input type="button" name="openparenth" class="bu" value="(" onclick="updateString('(')" />&nbsp;&nbsp;
+                                        <input type="button" name="closeparenth" class="bu" value=")" onclick="updateString(')')" />&nbsp;&nbsp;
+                                        <input type="button" name="power" class="bu" value=";-)" onclick="updateString(';-)')" />&nbsp;&nbsp;
+                                        <input type="button" name="modulus" class="bu" value=":-)" onclick="updateString(':-\)')" /><br />
+                                        <input type="button" name="zero" class="bu" value="0" onclick="updateString('0')" />&nbsp;&nbsp;
+                                        <input type="button" name="dot" class="bu" value="." onclick="updateString('.')" />&nbsp;&nbsp;
+                                        <input type="button" name="clear" class="bu" value="C" onclick="document.forms[1].input.value='';inputString=''" />&nbsp;&nbsp;
+                                        <input type="button" name="minus" class="bu" value="-" onclick="updateString('-')" /><br />
+                                        <input style="color:white;background-color:blue" type="button" name="calc" class="bu" value="=" onclick="document.forms[1].input.value = eval(inputString); inputString=''" />&nbsp;&nbsp;
+                                        <input type="button" name="mem" class="bu prim" value="M +" onclick="document.forms[1].storedValue.value = parseInt(document.forms[1].storedValue.value) + parseInt(document.forms[1].input.value)" />&nbsp;&nbsp;
+                                        <input type="button" name="recall" class="bu prim" value="MRC" onclick="updateString(document.forms[1].storedValue.value)" />&nbsp;&nbsp;
+                                        <input type="button" name="memClear" class="bu prim" value="MC" onclick="document.forms[1].storedValue.value=0" />
+                                        <input type="hidden" name="storedValue" value="0" /><br /><br />
+                                        <input id="window" type="text" name="input" />
+                                    </p>
+                                </form>
+                                <!-- FORM END -->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+
+                <ul id="center-col" class="list-group media-list media-list-stream mb-4">
+
+                    <li id="map2" class="map2 media list-group-item p-4 map">
+                        <div class="input-group">
+
+                        </div>
+                    </li>
+
+                    <li class="map2 media list-group-item p-4">
+                        <img class="media-object d-flex align-self-start mr-3">
+                        <div class="media-body">
+                            <div class="media-heading">
+                                <small class="float-right text-muted"> </small>
+                            </div>
+                            <div class="media-body-inline-grid" data-grid="images">
+                                <div class="gears"> </div>
+
+                                <div style="display: none">
+                                    <img data-action="zoom" data-width="640" data-height="640" src="src/img/TMMmoonscape.jpg">
+                                </div>
+
+                                <div style="display: none">
+                                  <div class="map"><h1>Juillet Model-View-Controller</h1></div>
+                                  <script type="text/javascript">
+                                    d3.json("data/world_countries.json", draw);
+                                  </script>
+
+                                </div>
+
+                                <div style="display: none">
+                                    <img data-action="zoom" data-width="1048" data-height="700" src="src/img/TMMmoonscape.jpg">
+                                </div>
+                            </div>
+
+                            <ul class="media-list mb-2">
+                                <li class="media mb-3">
+                                    <img class="media-object d-flex align-self-start mr-3">
+                                    <div class="media-body one">
+                                    </div>
+                                </li>
+                                <li class="media">
+                                    <img class="media-object d-flex align-self-start mr-3">
+                                    <div class="media-body">
+                                        <strong>   : </strong>
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="map2 media list-group-item p-4">
+                        <img class="media-object d-flex align-self-start mr-3">
+                        <div class="media-body">
+                            <div class="media-body-text">
+                                <div class="media-heading two" id="div5">
+                                </div>
+                                <p>
+
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="map2 media list-group-item p-4">
+                        <img class="media-object d-flex align-self-start mr-3">
+                        <div class="media-body">
+                            <div class="media-heading three">
+                                <small class="float-right text-muted"></small>
+                            </div>
+
+                            <div class="media-body-inline-grid" data-grid="images">
+                                <img style="display: none" data-width="640" data-height="640" data-action="zoom" src="src/img/TMMmoonscape.jpg">
+                            </div>
+
+                            <ul class="media-list">
+                                <li class="media">
+                                    <img class="media-object d-flex align-self-start mr-3">
+                                    <div class="media-body">
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <div class="alert alert-warning alert-dismissible hidden-md-down" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">  </button>
+                    <a class="alert-link" href="profile/index.html"> About Me </a>
+                </div>
+
+                <div class="card mb-4 hidden-md-down">
+                    <div class="card-block">
+                        <h6 class="mb-3"> </h6>
+                        <div data-grid="images" data-target-height="150">
+                            <img class="media-object" data-width="640" data-height="640" data-action="zoom" class="img" src="src/img/TMMmoonscape.jpg">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card mb-4 hidden-md-down">
+                    <div class="card-block">
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+            $("#samantha").mouseenter(function() {
+                $("#text").css({
+                    display: 'none'
+                });
+            }).mouseleave(function() {
+                $("#text").css({
+                    display: 'none'
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            var textShowing = false;
+            $("#samantha").click(function() {
+                if (textShowing) {
+                    $("#text").fadeOut(function() {
+                        $("#text").css({
+                            display: 'none'
+                        });
+                        textShowing = false;
+                    });
+                } else {
+                    $("#text").fadeIn(function() {
+                        $("#text").css({
+                            display: 'block'
+                        });
+                        textShowing = true;
+                    });
+                };
+            });
+        </script>
+    </div>
+    <!-- end divContainer-->
+    <div class="card card-link-list">
+
+        <div class="card-block" id="footer">
+            <p>Powered by _T_M_M_ using: Gulp TaskRunner, Git Version Control, Bootstrap V4, D3js, and other OpenWare | Intellectual Property, Contents, Design, Structure by _T_M_M_ &nbsp;&nbsp; |
+                <a style="color:yellow;text-decoration:none;" href="mailto:thomas76milton@gmail.com">thomas76milton@gmail.com</a> |
+                <a href="php/email.php"> Contact Information </a>| All Rights Reserved &copy; 2017 </p>
+        </div>
+        <!-- end card card-link-list -->
+    </div>
+    <!-- end card card-link-list -->
+
+</body>
+
+</html>

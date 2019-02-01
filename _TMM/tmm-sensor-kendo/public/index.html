@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"> 
+  <meta name="description" content="Sociology Data Analysis, Web Development and Statistical Consulting | Statistical Consultant. Get statistics help: 
+Thomas offers services related to analyzing qualitative &amp; quantitative data and reporting results in academic journals and business briefs alike.  Recent projects include research design, app design, and proof-of-concept for Xpansiv Data Systems, 
+and data analysis and web-application implementation. Data analysis and special pricing offers competitive benefits for clients.  
+If you need help with R, Python, Stata or SPSS, contact Thomas Maestas. Thomas will perform the analysis for you so you can focus on your
+ project and avoid the web and statistical package learning curve.">
+
+  <meta name="keywords" content="  data analysis and visualization, sociology statistical tests">
+  <meta name="author" content="Thomas Maestas">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="dist/css/vendor/toastr.min.css"> 
+    <link href="dist/css/vendor/kendo.common.min.css"  rel="stylesheet"  />
+    <link href="dist/css/vendor/kendo.dataviz.min.css" rel="stylesheet"  />
+  <!--<link href="dist/css/vendor/kendo.silver.min.css" rel="stylesheet"  />
+    <link href="dist/css/vendor/kendo.silver.mobile.min.css" rel="stylesheet"  />
+    <link href="dist/css/vendor/kendo.dataviz.default.min.css" rel="stylesheet"  />
+ <link rel="stylesheet" href="app/css/bootstrap.cerulean.min.css" />
+ -->   
+    <link rel="stylesheet" href="dist/css/app.css" />
+    
+  <style> 
+    .ui-view {
+      margin-top:50px; 
+    }
+    .alpho0 {
+      color:darkcyan;
+    } 
+    h1.title {
+      display:none;
+    }
+    input {
+      color:yellow;
+      background:darkblue;
+      z-index:100;
+    }
+    a {
+        color:yellow;
+    } 
+    a.navtmm {
+      background-image:url('dist/images/shadowbox.png');
+      height:110px;
+      max-height:110px;
+      width:200px;  
+    }
+    footer h5 {
+      color:yellow;
+    }
+    footer { 
+      position:relative;
+      top:150px;
+    }
+    .svgHolder {
+     opacity:.5;
+      position:absolute;
+      top:180px;
+    } 
+  .navtech {
+    text-align: center;
+    margin: 3px; 
+  font-family: 'Monoton';
+  float:left;
+  font-weight: 100; 
+  font-size: 1.1rem; }
+
+    .social {  
+      font-size:.9rem; 
+      margin:0;
+      border-radius:5%;
+      margin-top:5px; 
+      border-color:white;
+    }
+    .social li {
+      margin:0;
+      color:yellow;
+    } 
+.navbar-nav > li > a { 
+      padding-top:  4px; 
+     padding-bottom: 3px; } 
+     .navbar-default .navbar-toggle, .navbar-default { 
+     }
+  </style>
+</head>
+<body ng-app="app">
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand navtmm" ui-sref="home"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling   -->
+        <div class="collapse navbar-collapse navtech-wrapper" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right pull-right dailytech">
+          <li>
+            <a title="github" href="https://github.com/thomasm1" target="_blank">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a title="twitter" href="https://twitter.com/ThomasMaestas" target="_blank">
+              <i class="fa fa-twitter"></i>
+            </a>
+
+          </li> 
+
+          <li>
+
+            <a title="facebook" href="https://www.facebook.com/thomasm1.maestas" target="_blank">
+
+              <i class="fa fa-facebook"></i>
+
+            </a>
+
+          </li>
+
+          <li>
+
+            <a title="linkedin" href="httpd://linkedin.com/in/thomasmaestas" target="_blank">
+
+              <i class="fa fa-linkedin"></i>
+
+            </a>
+
+          </li>
+                <li><a ui-sref="register" ui-sref-active="active"> <small>LOGIN</small></a></li> 
+        </ul>
+         <ul class="nav navbar-nav navtech">
+                <li><a ui-sref="about" ui-sref-active="active">About</a></li>
+                <li><a ui-sref="profile" ui-sref-active="active">Profile</a></li>
+                <li><a ui-sref="chlor" ui-sref-active="active">Maps</a></li> 
+                <li><a ui-sref="dendro" ui-sref-active="active">Nodes</a></li>  
+                <li><a ui-sref="dataViz" ui-sref-active="active">Data Viz</a></li> 
+             
+            </ul>
+            
+        </ul>
+       
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav> 
+
+
+  <script src="dist/js/d3/d3v3.min.js"></script>
+  <div class="svgHolder"   id="force"></div> 
+  <script type="text/javascript" src="dist/js/dag.js"></script>
+<div ui-view></div>
+
+      <section class="home-quote">
+    <div class="row column medium-8 xxlarge-6">
+      <div class="quote-wrap">
+        <div class="quote"> 
+      </div>
+    </div>
+  </section>
+  <section>
+  <div class="pull-right">
+  <ul>
+  
+                <li><a ui-sref="schools" ui-sref-active="active">Sensors<span class="sr-only"> </span></a></li> 
+                <li><a ui-sref="classrooms" ui-sref-active="active">Subsensors</a></li>
+                <li><a ui-sref="activities" ui-sref-active="active">Supersensors</a></li> </ul>
+  </div>
+  </section>
+  <footer class="site-footer">
+    <div class="row column">
+      <nav class="footer-nav">
+       
+<div ng-include="'app/templates/footer.html'"></div>
+      </nav>
+    </div>
+ 
+  </footer>
+
+<!-- Libraries --> 
+         
+<script src="
+   https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.20/angular-ui-router.min.js"></script> 
+<script src="scripts/kendo.all.min.js"></script>
+<script src="scripts/angular-kendo.js"></script>
+
+<!-- Application code -->
+<script src="app/app.js"></script>
+  <script src="components/posts.js"></script>
+  <script src="components/about.js"></script> 
+  <script src="components/maps.js"></script> 
+
+<script src="app/services/profileService.js"></script>
+<script src="app/services/dataService.js"></script>
+<script src="app/services/dataSource.js"></script> 
+<!---->
+<script src="app/services/notifier.js"></script>
+
+<script src="app/filters/activityMonthFilter.js"></script>
+  <script src="app/controllers/AboutController.js"></script> 
+  <script src="app/controllers/ProfileController.js"></script> 
+<script src="app/controllers/HomeController.js"></script>
+<script src="app/controllers/AllSchoolsController.js"></script>
+<script src="app/controllers/AllClassroomsController.js"></script>
+<script src="app/controllers/AllActivitiesController.js"></script>
+<script src="app/controllers/ClassroomController.js"></script>
+<script src="app/controllers/ClassroomSummaryController.js"></script>
+<script src="app/controllers/ClassroomMessageController.js"></script>
+<script src="app/dtech/dtech.js"></script>
+ 
+    <script src="app/controllers/register.js"></script> 
+    <script src="app/controllers/globalEvents.js"></script>
+    <script src="app/controllers/order.js"></script> 
+    <script src="app/controllers/dataViz.js"></script>  
+
+  <script src="dist/js/main.js"></script>
+</body>
+</html>
