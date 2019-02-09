@@ -1,1 +1,0 @@
-Scripts for AWS Config. These are *not* configuration files.
