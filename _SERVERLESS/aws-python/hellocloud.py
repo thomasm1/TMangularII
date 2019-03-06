@@ -6,7 +6,7 @@ def lambda_handler(event, context):
         "headers": {
             "Access-Control-Allow-Origin": "*",
         },
-        "body": "Thomas Maestas"
+        "body": "Lambda Handler - GET Method Status Code ... expect 200 :-) Thomas Milton"
     }
     
     return resp

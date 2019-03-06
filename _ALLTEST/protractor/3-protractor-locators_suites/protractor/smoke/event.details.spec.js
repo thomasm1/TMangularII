@@ -3,7 +3,7 @@ describe('Event Details:', function(){
     var ratings;
 
     beforeEach(function(){
-      browser.get('http://localhost:3000/#!/EventRatings/540d090f92ce4386636a3069');
+      browser.get('http://localhost:3000/#!/EventRatings/540d090f92ce4386636a3069');    // Mongo ID of collection of ratings
       ratings = element.all(by.repeater('r in eventDetails.ratings'));
     });
 
