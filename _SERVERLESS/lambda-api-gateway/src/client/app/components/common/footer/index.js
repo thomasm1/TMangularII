@@ -7,7 +7,7 @@ export default class extends Component {
     return (
       <div className={styles.footer}>
         <small>
-          Copyright 2018 by Ryan H Lewis
+        
         </small>
       </div>
     )

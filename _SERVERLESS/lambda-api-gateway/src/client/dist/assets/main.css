@@ -1,39 +1,39 @@
-.src-client-app-components-common-footer-styles__footer--1pVoU {
+.src-client-app-components-common-footer-styles__footer--okLZv {
   bottom: 10px;
   color: #FFFFFF;
   width: 100%;
 }
 
-.src-client-app-components-common-logo-styles__logo-big--XL1m_ {
+.src-client-app-components-common-logo-styles__logo-big--fzfbY {
   object-fit: scale-down;
   width: 450px;
 }
 
-.src-client-app-components-common-logo-styles__logo-small--3lOQT {
+.src-client-app-components-common-logo-styles__logo-small--35QBA {
   object-fit: scale-down;
   width: 200px;
 }
 
-.src-client-app-components-main-styles__main--3uUEK {
+.src-client-app-components-main-styles__main--cKP4z {
   padding: 150px 0 0;
   text-align: center;
 }
 
 
-.src-client-app-components-main-styles__buttons--2PJ_j {
+.src-client-app-components-main-styles__buttons--YkHD9 {
   display: inline-block;
   margin: 35px 0;
 }
 
-.src-client-app-components-main-styles__buttons--2PJ_j .src-client-app-components-main-styles__playButton--qY1ux:first-child {
+.src-client-app-components-main-styles__buttons--YkHD9 .src-client-app-components-main-styles__playButton--3gDFk:first-child {
   margin-right: 5px;
 }
 
-.src-client-app-components-main-styles__buttons--2PJ_j .src-client-app-components-main-styles__playButton--qY1ux:last-child {
+.src-client-app-components-main-styles__buttons--YkHD9 .src-client-app-components-main-styles__playButton--3gDFk:last-child {
   margin-left: 5px;
 }
 
-.src-client-app-components-common-header-styles__header--2Wvf_ {
+.src-client-app-components-common-header-styles__header--2Xhhx {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -41,8 +41,8 @@
   width: 90%;
 }
 
-.src-client-app-components-common-header-styles__leftBar--k-gUU,
-.src-client-app-components-common-header-styles__rightBar--3EiIW {
+.src-client-app-components-common-header-styles__leftBar--3bMCJ,
+.src-client-app-components-common-header-styles__rightBar--3T_lI {
   align-items: center;
   background-color: white;
   display: flex;
@@ -52,25 +52,25 @@
   width: 50%;
 }
 
-.src-client-app-components-common-header-styles__leftBar--k-gUU {
+.src-client-app-components-common-header-styles__leftBar--3bMCJ {
   border-radius: 20px 0 0 20px;
   margin: 25px 15px 0 0;
 }
 
-.src-client-app-components-common-header-styles__rightBar--3EiIW {
+.src-client-app-components-common-header-styles__rightBar--3T_lI {
   border-radius: 0 20px 20px 0;
   margin: 25px 0 0 15px;
 }
 
-.src-client-app-components-common-header-styles__text--3bvJs {
+.src-client-app-components-common-header-styles__text--eMwk_ {
   margin-right: 10px;
 }
 
-.src-client-app-components-common-header-styles__value--3_5wo {
+.src-client-app-components-common-header-styles__value--2a-de {
   font-weight: bold;
 }
 
-.src-client-app-components-play-components-trash-panda-styles__pandaContainer--2P6N6 {
+.src-client-app-components-play-components-trash-panda-styles__pandaContainer--2pE1a {
   align-items: center;
   background-color: white;
   border: 3px solid white;
@@ -83,18 +83,18 @@
   width: 300px;
 }
 
-.src-client-app-components-play-components-trash-panda-styles__pandaImage--3BdH_ {
+.src-client-app-components-play-components-trash-panda-styles__pandaImage--1eQ4F {
   height: 450px;
 }
 
-.src-client-app-components-play-components-trash-panda-styles__remainingCounter--3guDI {
+.src-client-app-components-play-components-trash-panda-styles__remainingCounter--wk5td {
   font-weight: bold;
   position: absolute;
   right: 10px;
   top: 10px;
 }
 
-.src-client-app-components-play-components-food-container-food-styles__food--2PXpp {
+.src-client-app-components-play-components-food-container-food-styles__food--3awp6 {
   background-color: white;
   border: 3px solid white;
   border-radius: 3px;
@@ -106,27 +106,27 @@
   width: 90px;
 }
 
-.src-client-app-components-play-components-food-container-food-styles__food--2PXpp:focus,
-.src-client-app-components-play-components-food-container-food-styles__food--2PXpp:hover {
+.src-client-app-components-play-components-food-container-food-styles__food--3awp6:focus,
+.src-client-app-components-play-components-food-container-food-styles__food--3awp6:hover {
   transform: scale(1.1);
 }
 
-.src-client-app-components-play-components-food-container-food-styles__food--2PXpp.src-client-app-components-play-components-food-container-food-styles__disabled--3hJcV {
+.src-client-app-components-play-components-food-container-food-styles__food--3awp6.src-client-app-components-play-components-food-container-food-styles__disabled--2JP7W {
   cursor: not-allowed;
   opacity: .6;
 }
 
-.src-client-app-components-play-components-food-container-food-styles__food--2PXpp.src-client-app-components-play-components-food-container-food-styles__disabled--3hJcV:focus,
-.src-client-app-components-play-components-food-container-food-styles__food--2PXpp.src-client-app-components-play-components-food-container-food-styles__disabled--3hJcV:hover {
+.src-client-app-components-play-components-food-container-food-styles__food--3awp6.src-client-app-components-play-components-food-container-food-styles__disabled--2JP7W:focus,
+.src-client-app-components-play-components-food-container-food-styles__food--3awp6.src-client-app-components-play-components-food-container-food-styles__disabled--2JP7W:hover {
   transform: none;
 }
 
-.src-client-app-components-play-components-food-container-food-styles__food--2PXpp > img {
+.src-client-app-components-play-components-food-container-food-styles__food--3awp6 > img {
   height: 50px;
   width: 90px;
 }
 
-.src-client-app-components-play-components-food-container-styles__foodContainer--1uNM_ {
+.src-client-app-components-play-components-food-container-styles__foodContainer--3OWlK {
   align-content: space-between;
   display: flex;
   flex-wrap: wrap;
@@ -134,26 +134,26 @@
   width: 225px;
 }
 
-button.src-client-app-components-play-components-instructions-styles__button--rvbTy {
+button.src-client-app-components-play-components-instructions-styles__button--3Hauu {
   margin: 35px 0;
 }
 
-.src-client-app-components-play-styles__mainContainer--3-fld {
+.src-client-app-components-play-styles__mainContainer--23dBX {
   display: flex;
   justify-content: center;
   margin: 35px auto 0;
   width: 90%;
 }
 
-.src-client-app-components-play-styles__mainContainer--3-fld > div:first-child {
+.src-client-app-components-play-styles__mainContainer--23dBX > div:first-child {
   margin: 0 35px 0 0;
 }
 
-.src-client-app-components-play-styles__mainContainer--3-fld > div:last-child {
+.src-client-app-components-play-styles__mainContainer--23dBX > div:last-child {
   margin: 0 0 0 35px;
 }
 
-.src-client-app-components-play-styles__remainingCustomers--1CWLO {
+.src-client-app-components-play-styles__remainingCustomers--3mP_- {
   align-items: center;
   background-color: white;
   border-radius: 20px;
@@ -165,7 +165,7 @@ button.src-client-app-components-play-components-instructions-styles__button--rv
   width: 90%;
 }
 
-.src-client-app-components-final-score-styles__resultsContainer--2fYth {
+.src-client-app-components-final-score-styles__resultsContainer--1safr {
   align-items: center;
   background-color: white;
   border: 3px solid white;
@@ -179,17 +179,17 @@ button.src-client-app-components-play-components-instructions-styles__button--rv
   width: 300px;
 }
 
-.src-client-app-components-final-score-styles__finalScoreContainer--bjyMW > .src-client-app-components-final-score-styles__button--2DzvP {
+.src-client-app-components-final-score-styles__finalScoreContainer--2SAns > .src-client-app-components-final-score-styles__button--3AAeM {
   margin-right: 15px;
 }
 
-.src-client-app-components-final-score-styles__header--2VP9T {
+.src-client-app-components-final-score-styles__header--2cDcR {
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 15px;
 }
 
-.src-client-app-components-final-score-styles__result--2Y74- {
+.src-client-app-components-final-score-styles__result--34uKE {
   display: flex;
   font-size: 18px;
   justify-content: center;
@@ -197,16 +197,16 @@ button.src-client-app-components-play-components-instructions-styles__button--rv
   opacity: .7;
 }
 
-.src-client-app-components-final-score-styles__result--2Y74- > .src-client-app-components-final-score-styles__name--Bn7Zp {
+.src-client-app-components-final-score-styles__result--34uKE > .src-client-app-components-final-score-styles__name--_IuYV {
   font-weight: 500;
   margin-right: 15px;
 }
 
-.src-client-app-components-final-score-styles__result--2Y74- > .src-client-app-components-final-score-styles__points--3Dk8Y {
+.src-client-app-components-final-score-styles__result--34uKE > .src-client-app-components-final-score-styles__points--Vgxzu {
   margin-left: 10px;
 }
 
-.src-client-app-components-final-score-styles__saveContainer--3kd3v > div {
+.src-client-app-components-final-score-styles__saveContainer--1BP-t > div {
   align-items: center;
   background-color: white;
   border: 3px solid white;
@@ -220,15 +220,15 @@ button.src-client-app-components-play-components-instructions-styles__button--rv
   width: 300px;
 }
 
-.src-client-app-components-final-score-styles__saveContainer--3kd3v > div > div {
+.src-client-app-components-final-score-styles__saveContainer--1BP-t > div > div {
   margin: 0;
 }
 
-.src-client-app-components-final-score-styles__saveButtonWrapper--1Ul7D {
+.src-client-app-components-final-score-styles__saveButtonWrapper--3LLyk {
   position: relative;
 }
 
-.src-client-app-components-final-score-styles__saveButtonWrapper--1Ul7D > .src-client-app-components-final-score-styles__buttonProgress--13d78 {
+.src-client-app-components-final-score-styles__saveButtonWrapper--3LLyk > .src-client-app-components-final-score-styles__buttonProgress--1oM4m {
   color: #4CAF50;
   left: 50%;
   margin: -12px 0 0 -12px;
@@ -236,7 +236,7 @@ button.src-client-app-components-play-components-instructions-styles__button--rv
   top: 50%;
 }
 
-.src-client-app-components-high-scores-styles__listContainer--1DCCh {
+.src-client-app-components-high-scores-styles__listContainer--3gNSc {
   align-items: center;
   background-color: white;
   border: 3px solid white;
@@ -250,13 +250,13 @@ button.src-client-app-components-play-components-instructions-styles__button--rv
   width: 300px;
 }
 
-.src-client-app-components-high-scores-styles__header--UVESr {
+.src-client-app-components-high-scores-styles__header--3JMHs {
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 15px;
 }
 
-.src-client-app-components-high-scores-styles__result--1F_l0 {
+.src-client-app-components-high-scores-styles__result--8_5VF {
   display: flex;
   font-size: 18px;
   justify-content: center;
@@ -264,12 +264,12 @@ button.src-client-app-components-play-components-instructions-styles__button--rv
   opacity: .7;
 }
 
-.src-client-app-components-high-scores-styles__result--1F_l0 > .src-client-app-components-high-scores-styles__name--2lxPd {
+.src-client-app-components-high-scores-styles__result--8_5VF > .src-client-app-components-high-scores-styles__name--1Y2rn {
   font-weight: 500;
   margin-right: 15px;
 }
 
-.src-client-app-components-high-scores-styles__result--1F_l0 > .src-client-app-components-high-scores-styles__points--3xXGk {
+.src-client-app-components-high-scores-styles__result--8_5VF > .src-client-app-components-high-scores-styles__points--3oh2M {
   margin-left: 10px;
 }
 
