@@ -1,0 +1,20 @@
+[
+    { 
+        "name": "patient1",
+        "age": "23",
+        "gender": "male",
+        "email": "thomasm1.maestas@gmail.com",
+        "height": "60",
+        "dob": "09/03/1976",
+        "address": "2300 calle de real"
+    }
+{ 
+        "name": "patient2",
+        "age": "33",
+        "gender": "female",
+        "email": "sue.grammar@gmail.com",
+        "height": "54",
+        "dob": "12/05/1986",
+        "address": "2 Teal Dr."
+    }
+]
