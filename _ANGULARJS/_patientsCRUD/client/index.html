@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="patientApp">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Patient Tracker</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+ 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+   <!-- <link rel='stylesheet' type='text/css' media='screen' href='/css/main.css'>-->
+  
+</head>
+<body >
+    <div  ng-controller="patientsController">
+        <h1>There are {{patients.length}} patients</h1>
+        <ul>
+            <li ng-repeat="patient in patients">
+                {{patient.name}}
+            </li>
+            <form ng-submit="createPatient()">
+                <input type="text" placeholder="Patient Name" ng-model="patientName">
+                <button type="submit">Add</button>
+            </form>
+        </ul>
+    </div>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
+    <!--
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-resource.min.js'></script>
+    -->
+
+    <script src='/js/app.js'></script>
+    <script src='/js/controllers/patients-controller.js'></script>
+</body>
+</html>
