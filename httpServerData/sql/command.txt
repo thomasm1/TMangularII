@@ -1,1 +1,0 @@
-COPY actor TO 'D:\Log\actor.csv' DELIMITER ',' CSV;
