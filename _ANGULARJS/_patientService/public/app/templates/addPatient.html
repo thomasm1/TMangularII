@@ -1,0 +1,27 @@
+<h3>Add Patient</h3>
+
+<form class="form-horizontal" role="form">
+    <div class="form-group">
+        <label for="patientTitle" class="col-sm-1 control-label">Title</label>
+        <div class="col-sm-4">
+            <input ng-model="patientAdder.newPatient.title" type="text" class="form-control" id="patientTitle" placeholder="Title">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="patientAuthor" class="col-sm-1 control-label">Author</label>
+        <div class="col-sm-4">
+            <input ng-model="patientAdder.newPatient.author" type="text" class="form-control" id="patientAuthor" placeholder="Author">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="patientPublished" class="col-sm-1 control-label">Year</label>
+        <div class="col-sm-4">
+            <input ng-model="patientAdder.newPatient.year_published" type="text" class="form-control" id="patientPublished" placeholder="Year Published">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-1 col-sm-5">
+            <button ng-click="patientAdder.addPatient()" class="btn btn-default">Save</button>
+        </div>
+    </div>
+</form>

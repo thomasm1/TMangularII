@@ -1,0 +1,31 @@
+<div>
+    {{ patients.summaryData.patientCount }} Patients -
+    {{ patients.summaryData.readerCount }} Readers -
+    {{ patients.summaryData.grandTotalMinutes }} Total Minutes Read
+</div>
+
+<h3>All Patients</h3>
+<div>
+    <ul>
+        <li ng-repeat="patient in patients.allPatients">{{ patient.title }} - {{ patient.author }}
+            <a href="#/EditPatient/{{ patient.patient_id }}">Edit</a>
+            <a ng-click="patients.deletePatient(patient.patient_id)" href="">Delete</a>
+        </li>
+    </ul>
+</div>
+
+<a href="#/AddPatient">Add New Patient</a>
+<a href="#/EditPatient/{{ patients.currentUser.lastPatientEdited.patient_id }}">Open Last Edited</a>
+
+<h3>All Readers</h3>
+<div>
+    <ul>
+        <li ng-repeat="reader in patients.allReaders">{{ reader.name }} - {{ patients.getBadge(reader.totalMinutesRead) }}</li>
+    </ul>
+</div>
+
+
+<h3>Current Favorite Patient</h3>
+<div>
+    {{ patients.favoritePatient }}
+</div>
